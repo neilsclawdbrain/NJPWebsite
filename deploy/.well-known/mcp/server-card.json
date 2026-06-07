@@ -1,0 +1,18 @@
+{
+  "serverInfo": {
+    "name": "drneilpatelmd-content",
+    "title": "Dr. Neil Patel MD — Concussion Education Content",
+    "version": "1.0.0",
+    "description": "Public, read-only concussion and sports-neurology educational content. No remote MCP transport is currently operational; tools are exposed in-browser via WebMCP on the homepage. See /.well-known/agent-skills/index.json for content-consumption guidance."
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://www.drneilpatelmd.com/mcp"
+  },
+  "capabilities": {
+    "tools": {},
+    "resources": {},
+    "prompts": null
+  },
+  "documentation": "https://www.drneilpatelmd.com/auth.md"
+}

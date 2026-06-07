@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f1e6">
+<title>Dr. Neil J. Patel, MD MBA — Editorial Mockup (Direction B)</title>
+<meta name="robots" content="noindex,nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Reset ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ===== Tokens ===== */
+:root{
+  --bg: oklch(0.965 0.012 80);
+  --bg-2: oklch(0.93 0.012 80);
+  --surface: oklch(0.985 0.008 80);
+  --surface-2: oklch(0.92 0.012 80);
+  --ink: oklch(0.2 0.015 50);
+  --ink-soft: oklch(0.4 0.02 60);
+  --ink-faint: oklch(0.55 0.02 60);
+  --accent: oklch(0.36 0.09 250);
+  --accent-soft: oklch(0.5 0.09 250);
+  --accent-bg: oklch(0.95 0.025 250);
+  --rule: oklch(0.78 0.012 60 / 0.55);
+  --rule-strong: oklch(0.62 0.018 60);
+  --serif: 'Source Serif 4', 'Iowan Old Style', Georgia, serif;
+  --sans: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: ui-monospace, 'SF Mono', 'Menlo', 'Consolas', monospace;
+  --maxw: 1120px;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+html, body { background: var(--bg); color: var(--ink); }
+body { font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; font-feature-settings: 'ss01', 'kern'; }
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 { font-family: var(--serif); color: var(--ink); font-weight: 600; line-height: 1.1; letter-spacing: -0.015em; }
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.025em; font-variation-settings: 'opsz' 60; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: .35em; font-variation-settings: 'opsz' 36; }
+h3 { font-size: 1.3rem; font-variation-settings: 'opsz' 18; }
+h4 { font-size: 1.05rem; font-variation-settings: 'opsz' 14; }
+p { color: var(--ink-soft); max-width: 70ch; }
+.lede { font-family: var(--serif); font-size: 1.2rem; line-height: 1.5; color: var(--ink); font-style: italic; font-variation-settings: 'opsz' 24; max-width: 50ch; }
+em { font-style: italic; }
+strong { font-weight: 600; color: var(--ink); }
+
+.kicker { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.fig-cap { font-family: var(--serif); font-style: italic; font-size: 0.9rem; color: var(--ink-faint); font-variation-settings: 'opsz' 10; line-height: 1.4; }
+.fig-num { font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-right: .5em; }
+.small-caps { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* ===== Layout ===== */
+.container { max-width: var(--maxw); margin: 0 auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+.container-wide { max-width: 1240px; margin: 0 auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+section { padding-block: clamp(4rem, 7vw, 6rem); }
+.alt { background: var(--bg-2); border-block: 1px solid var(--rule); }
+hr.rule { border: 0; height: 1px; background: var(--rule); margin: 0; }
+hr.rule-strong { border: 0; height: 1px; background: var(--rule-strong); margin: 0; }
+hr.rule-double { border: 0; padding-block: 4px; background: linear-gradient(to bottom, var(--rule-strong) 0%, var(--rule-strong) 1px, transparent 1px, transparent 3px, var(--rule-strong) 3px, var(--rule-strong) 4px); }
+
+/* ===== Skip link ===== */
+.skip { position: absolute; left: -9999px; top: 1rem; background: var(--accent); color: var(--bg); padding: .75rem 1rem; border-radius: 4px; font-weight: 600; z-index: 99; }
+.skip:focus { left: 1rem; }
+
+/* ===== Masthead ===== */
+.masthead { border-bottom: 1px solid var(--rule-strong); }
+.masthead-top { border-top: 4px double var(--rule-strong); padding-block: 0.5rem; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; }
+.masthead-top .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.masthead-top .live { display: inline-flex; align-items: center; gap: .5rem; color: var(--accent); font-weight: 600; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display: inline-block; animation: livePulse 2s ease-in-out infinite; }
+@keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .4; transform: scale(1.2); } }
+
+.nameplate { padding-block: 1.5rem 1.25rem; }
+.nameplate .container { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+.nameplate-name { font-family: var(--serif); font-weight: 700; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1; letter-spacing: -0.03em; font-variation-settings: 'opsz' 60; color: var(--ink); }
+.nameplate-name em { font-style: italic; color: var(--accent); font-weight: 700; }
+.nameplate-sub { font-family: var(--serif); font-style: italic; color: var(--ink-soft); font-size: 1.05rem; margin-top: .35rem; font-variation-settings: 'opsz' 14; }
+.nameplate-meta { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); text-align: right; line-height: 1.6; }
+.nameplate-meta strong { color: var(--ink); font-weight: 600; }
+
+.subnav { border-top: 1px solid var(--rule); padding-block: 0.85rem; }
+.subnav .container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.subnav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+.subnav-links a { color: var(--ink-soft); font-size: 0.85rem; font-weight: 500; letter-spacing: 0.02em; }
+.subnav-links a:hover { color: var(--accent); text-decoration: none; }
+
+.btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 600; padding: .65rem 1.1rem; border-radius: 2px; border: 1px solid transparent; cursor: pointer; transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease); letter-spacing: 0.01em; text-rendering: optimizeLegibility; }
+.btn-primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn-primary:hover { background: oklch(0.3 0.1 250); border-color: oklch(0.3 0.1 250); text-decoration: none; color: var(--bg); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* ===== Hero ===== */
+.hero { padding-top: clamp(3rem, 5vw, 5rem); padding-bottom: clamp(3rem, 5vw, 4rem); }
+.hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; } }
+.hero-headline { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.025em; margin-block: 1.5rem 1.25rem; font-variation-settings: 'opsz' 60; }
+.hero-headline em { font-style: italic; color: var(--accent); }
+.hero-cta { display: flex; gap: .75rem; margin-top: 2rem; flex-wrap: wrap; }
+.hero-meta { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.hero-meta-item { display: block; }
+.hero-meta-item .label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--ink-faint); margin-bottom: .3rem; }
+.hero-meta-item .value { font-family: var(--serif); font-size: 1rem; color: var(--ink); font-variation-settings: 'opsz' 14; }
+
+/* ===== Brain FIG. 1 — pulsing ===== */
+.hero-fig { position: relative; }
+.brain-fig { position: relative; background: var(--surface); border: 1px solid var(--rule); padding: 1.5rem 1.5rem 1.25rem; }
+.brain-fig::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+.brain-fig .fig-num { display: block; margin-bottom: .75rem; }
+.brain-svg-wrap { aspect-ratio: 1 / 1; max-width: 360px; margin: 0 auto 1rem; position: relative; }
+.brain-svg { width: 100%; height: 100%; }
+.brain-outline { fill: none; stroke: var(--accent); stroke-width: 1.4; opacity: 0.9; }
+.brain-inner { fill: none; stroke: var(--accent-soft); stroke-width: 0.7; opacity: 0.55; }
+.brain-core { fill: var(--accent-bg); opacity: 0.4; animation: brainCorePulse 4.2s ease-in-out infinite; transform-origin: center; }
+.synapse { fill: var(--accent); animation: synapsePulse 2.4s ease-in-out infinite; }
+.synapse:nth-child(odd) { animation-delay: 0.6s; }
+.synapse:nth-child(3n) { animation-delay: 1.2s; fill: var(--accent-soft); }
+.synapse:nth-child(5n) { animation-delay: 1.8s; }
+@keyframes brainCorePulse { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.55; transform: scale(1.025); } }
+@keyframes synapsePulse { 0%, 100% { opacity: 0.3; r: 1.6; } 50% { opacity: 1; r: 3; } }
+@media (prefers-reduced-motion: reduce) {
+  .brain-core, .synapse { animation: none !important; }
+}
+.brain-caption { border-top: 1px solid var(--rule); padding-top: .85rem; display: flex; justify-content: space-between; gap: 1rem; }
+
+/* ===== Affiliations strip ===== */
+.affil { border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); padding-block: 1.25rem; background: var(--bg-2); }
+.affil-inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .75rem 2rem; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--ink); }
+.affil-inner span { display: inline-flex; align-items: center; gap: .75rem; }
+.affil-inner span::before { content: "·"; color: var(--ink-faint); margin-right: 2rem; font-weight: 400; }
+.affil-inner span:first-child::before { display: none; }
+
+/* ===== Section heading ===== */
+.sec-head { max-width: 700px; margin-bottom: 3rem; }
+.sec-head .kicker { display: block; margin-bottom: .85rem; }
+.sec-head h2 { margin-bottom: .5rem; }
+.sec-head p { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink-soft); font-variation-settings: 'opsz' 18; }
+
+/* ===== Expertise (editorial spread) ===== */
+.expertise-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
+@media (max-width: 880px) { .expertise-grid { grid-template-columns: 1fr; gap: 2rem; } }
+.expertise-lead { border-top: 4px double var(--rule-strong); padding-top: 1.5rem; }
+.expertise-lead .area-num { font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--accent); margin-bottom: .5rem; }
+.expertise-lead h3 { font-size: clamp(1.6rem, 2.5vw, 2.1rem); font-weight: 700; line-height: 1.08; margin-bottom: .75rem; font-variation-settings: 'opsz' 36; letter-spacing: -0.02em; }
+.expertise-lead .lede { font-size: 1.05rem; margin-bottom: 1.25rem; }
+.expertise-lead ul { list-style: none; }
+.expertise-lead li { padding: .75rem 0; border-top: 1px solid var(--rule); display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; font-size: 0.95rem; color: var(--ink); }
+.expertise-lead li::first-letter { font-variant-numeric: tabular-nums; }
+.expertise-lead li .num { font-family: var(--serif); font-style: italic; color: var(--ink-faint); font-variation-settings: 'opsz' 14; }
+
+.expertise-side { display: flex; flex-direction: column; gap: 2rem; }
+.expertise-item { border-top: 1px solid var(--rule); padding-top: 1rem; }
+.expertise-item .area-num { font-family: var(--serif); font-style: italic; font-size: 0.85rem; color: var(--accent); margin-bottom: .35rem; }
+.expertise-item h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .4rem; }
+.expertise-item p { font-size: 0.95rem; }
+
+.expertise-strip { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule-strong); display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+@media (max-width: 720px) { .expertise-strip { grid-template-columns: 1fr; } }
+.strip-item .area-num { font-family: var(--serif); font-style: italic; font-size: 0.8rem; color: var(--accent); margin-bottom: .3rem; }
+.strip-item h4 { font-size: 1.05rem; margin-bottom: .35rem; }
+.strip-item p { font-size: 0.9rem; }
+
+/* ===== Brain anatomy FIG. 2 ===== */
+.fig-section { padding-block: clamp(3rem, 5vw, 5rem); }
+.fig-header { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule); padding-block: .75rem; margin-bottom: 2.5rem; gap: 1rem; flex-wrap: wrap; }
+.fig-header .fig-num { margin: 0; }
+.fig-header h2 { font-size: 1.5rem; margin: 0; font-weight: 600; }
+.fig-header .fig-source { font-size: 0.78rem; color: var(--ink-faint); font-style: italic; font-family: var(--serif); }
+
+.brain-anatomy { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; }
+@media (max-width: 880px) { .brain-anatomy { grid-template-columns: 1fr; } }
+
+.brain-diagram { background: var(--surface); border: 1px solid var(--rule); padding: 2rem; position: relative; }
+.brain-diagram svg { width: 100%; height: auto; }
+.brain-region { fill: var(--accent-bg); stroke: var(--accent); stroke-width: 0.8; opacity: 0.65; cursor: pointer; transition: fill .25s var(--ease), opacity .25s var(--ease); }
+.brain-region:hover, .brain-region:focus, .brain-region.active { fill: var(--accent); opacity: 1; outline: none; }
+.brain-label { font-family: var(--sans); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; fill: var(--ink); pointer-events: none; }
+.brain-region.active + .brain-label, .brain-region:hover + .brain-label { fill: var(--bg); }
+
+.brain-panel { background: var(--bg-2); padding: 2rem; border: 1px solid var(--rule); position: relative; }
+.brain-panel .region-tag { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: .5rem; display: block; }
+.brain-panel h3 { font-size: 1.5rem; margin-bottom: .75rem; }
+.brain-panel h4 { font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-top: 1.25rem; margin-bottom: .5rem; font-family: var(--sans); font-weight: 600; }
+.brain-panel ul { list-style: none; }
+.brain-panel li { padding: .35rem 0; border-bottom: 1px solid var(--rule); font-size: 0.95rem; color: var(--ink); }
+.brain-panel li:last-child { border-bottom: 0; }
+
+/* ===== Services (numbered list) ===== */
+.svc-list { list-style: none; }
+.svc-item { display: grid; grid-template-columns: 80px 1fr auto; gap: 2rem; padding-block: 2rem; border-top: 1px solid var(--rule-strong); align-items: start; }
+.svc-item:last-child { border-bottom: 1px solid var(--rule-strong); }
+@media (max-width: 720px) { .svc-item { grid-template-columns: 1fr; gap: .5rem; } }
+.svc-num { font-family: var(--serif); font-style: italic; font-size: 2rem; color: var(--accent); line-height: 1; font-weight: 400; font-variation-settings: 'opsz' 40; }
+.svc-body h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: .5rem; letter-spacing: -0.015em; }
+.svc-body p { font-size: 1rem; }
+.svc-link { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; color: var(--accent); white-space: nowrap; padding-top: .5rem; }
+.svc-link:hover { text-decoration: underline; }
+
+/* ===== Consensus timeline FIG. 3 ===== */
+.timeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; margin-top: 2rem; }
+@media (max-width: 720px) { .timeline { grid-template-columns: 1fr; } .timeline-item { border-top: 1px solid var(--rule); border-left: none !important; padding-top: 1rem; padding-left: 0; } .timeline::before { display: none; } .timeline-dot { display: none; } }
+.timeline::before { content: ""; position: absolute; top: 20px; left: 0; right: 0; height: 1px; background: var(--rule-strong); }
+.timeline-item { padding: 0 1.5rem 0 0; position: relative; }
+.timeline-item + .timeline-item { border-left: 1px solid var(--rule); padding-left: 1.5rem; }
+.timeline-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--accent); position: relative; z-index: 2; margin-bottom: 1rem; margin-top: 15px; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--accent); }
+.timeline-item.future .timeline-dot { background: var(--bg); border-color: var(--bg); box-shadow: 0 0 0 1px var(--rule-strong); }
+.timeline-year { font-family: var(--serif); font-weight: 700; font-size: 1.6rem; color: var(--ink); line-height: 1; margin-bottom: .25rem; letter-spacing: -0.02em; font-variation-settings: 'opsz' 28; }
+.timeline-place { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--accent); margin-bottom: .75rem; font-variation-settings: 'opsz' 14; }
+.timeline-desc { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; }
+.timeline-item.future .timeline-year, .timeline-item.future .timeline-place { color: var(--ink-faint); }
+
+/* ===== Symptom education tool ===== */
+.checker { max-width: 720px; margin: 0 auto; background: var(--surface); border: 1px solid var(--rule); padding: 2.5rem; }
+.checker-disclaimer { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1rem 1.25rem; background: var(--bg-2); border-left: 3px solid var(--accent); margin-bottom: 2rem; border-radius: 0; }
+.checker-disclaimer svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.checker-disclaimer strong { color: var(--ink); display: block; margin-bottom: .15rem; font-family: var(--serif); font-size: 1.05rem; }
+.checker-disclaimer p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+.checker-progress { display: flex; gap: 6px; margin-bottom: 2rem; }
+.checker-progress span { flex: 1; height: 3px; background: var(--rule); }
+.checker-progress span.done { background: var(--accent); }
+.checker-q { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 1.25rem; line-height: 1.3; font-variation-settings: 'opsz' 20; }
+.checker-step-label { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; margin-bottom: .5rem; }
+.checker-options { display: flex; flex-direction: column; gap: .5rem; }
+.checker-opt { text-align: left; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--rule); cursor: pointer; font-family: var(--sans); font-size: 0.95rem; color: var(--ink); transition: border-color .2s var(--ease), background .2s var(--ease); }
+.checker-opt:hover { border-color: var(--accent); background: var(--accent-bg); }
+
+/* ===== Research index FIG. 4 ===== */
+.research-dashboard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; padding-block: 2rem; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule); margin-bottom: 2.5rem; }
+@media (max-width: 720px) { .research-dashboard { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+.dash-item { display: flex; flex-direction: column; }
+.dash-num { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--ink); line-height: 1; letter-spacing: -0.02em; margin-bottom: .35rem; font-variation-settings: 'opsz' 36; }
+.dash-num em { font-style: italic; color: var(--accent); font-weight: 600; }
+.dash-label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--ink-faint); }
+
+.research-list { list-style: none; }
+.research-item { padding-block: 1.5rem; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 80px 1fr; gap: 2rem; align-items: start; }
+@media (max-width: 720px) { .research-item { grid-template-columns: 1fr; gap: .25rem; } }
+.research-num { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink-faint); }
+.research-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; line-height: 1.3; font-variation-settings: 'opsz' 16; }
+.research-cite { font-size: 0.85rem; color: var(--ink-soft); font-style: italic; font-family: var(--serif); margin-bottom: .35rem; }
+.research-cite .journal { font-style: normal; font-weight: 600; color: var(--ink); }
+.research-tag { display: inline-block; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--accent); }
+
+/* ===== Resource hub ===== */
+.resource-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 2rem; }
+@media (max-width: 880px) { .resource-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .resource-grid { grid-template-columns: 1fr; } }
+.resource-card { display: block; padding-top: 1rem; border-top: 1px solid var(--rule-strong); color: var(--ink); }
+.resource-card:hover { text-decoration: none; }
+.resource-card:hover .resource-title { color: var(--accent); }
+.resource-tag { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: var(--accent); margin-bottom: .75rem; display: block; }
+.resource-title { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; line-height: 1.25; margin-bottom: .5rem; transition: color .2s var(--ease); font-variation-settings: 'opsz' 16; letter-spacing: -0.01em; }
+.resource-dek { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-top: 1px solid var(--rule); padding-block: 1.5rem; display: grid; grid-template-columns: 60px 1fr; gap: 1.5rem; }
+.faq-item:first-child { border-top: 1px solid var(--rule-strong); }
+.faq-item:last-child { border-bottom: 1px solid var(--rule-strong); }
+.faq-num { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--ink-faint); padding-top: .15rem; font-variation-settings: 'opsz' 14; }
+.faq-q { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; margin-bottom: .5rem; color: var(--ink); line-height: 1.3; font-variation-settings: 'opsz' 16; letter-spacing: -0.01em; }
+.faq-a { color: var(--ink-soft); font-size: 0.98rem; }
+.faq-a::before { content: "A. "; font-family: var(--serif); font-style: italic; color: var(--accent); font-weight: 600; margin-right: .25rem; }
+
+/* ===== Glossary ===== */
+.glossary { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 3rem; border-top: 1px solid var(--rule-strong); }
+@media (max-width: 720px) { .glossary { grid-template-columns: 1fr; } }
+.glossary-item { padding-block: 1rem; border-bottom: 1px dotted var(--rule); }
+.glossary-term { font-family: var(--serif); font-weight: 700; font-size: 1.05rem; color: var(--ink); margin-bottom: .35rem; font-variation-settings: 'opsz' 14; letter-spacing: -0.01em; }
+.glossary-abbr { font-style: italic; font-weight: 400; color: var(--accent); font-size: 0.85rem; margin-left: .35rem; }
+.glossary-def { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.55; }
+
+/* ===== About ===== */
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
+@media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; } }
+.about-prose p { font-family: var(--serif); font-size: 1.1rem; color: var(--ink); line-height: 1.65; margin-bottom: 1.25rem; max-width: 60ch; font-variation-settings: 'opsz' 14; }
+.about-prose .pull-quote { font-family: var(--serif); font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 600; font-style: italic; color: var(--accent); line-height: 1.25; padding: 2rem 0 1.5rem; border-block: 1px solid var(--rule-strong); margin: 2rem 0; max-width: none; font-variation-settings: 'opsz' 28; letter-spacing: -0.015em; }
+.creds { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--rule-strong); }
+.cred { padding-block: 1rem; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1.5fr; gap: 1rem; }
+.cred strong { font-family: var(--serif); font-weight: 600; color: var(--ink); font-size: 1rem; font-variation-settings: 'opsz' 14; }
+.cred span { font-size: 0.85rem; color: var(--ink-soft); }
+
+/* ===== Dual path CTA ===== */
+.dual { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+@media (max-width: 720px) { .dual { grid-template-columns: 1fr; } .dual-col + .dual-col { border-left: none !important; border-top: 1px solid var(--rule); } }
+.dual-col { padding: 2.5rem; }
+.dual-col + .dual-col { border-left: 1px solid var(--rule); }
+.dual-col .kicker { display: block; margin-bottom: 1rem; }
+.dual-col h3 { font-size: 1.6rem; margin-bottom: 1rem; letter-spacing: -0.015em; }
+.dual-col p { font-size: 1rem; margin-bottom: 1.5rem; }
+.dual-col ul { list-style: none; margin-bottom: 1.5rem; }
+.dual-col li { padding-block: .5rem; border-top: 1px solid var(--rule); font-size: 0.92rem; color: var(--ink); }
+.dual-col li:first-child { border-top: 0; }
+.dual-col .btns { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+/* ===== Footer / Colophon ===== */
+footer { background: var(--bg-2); border-top: 1px solid var(--rule-strong); padding-block: 3rem 2rem; margin-top: 4rem; }
+.foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+@media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .foot-grid { grid-template-columns: 1fr; } }
+.foot-col h4 { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--ink); margin-bottom: 1rem; }
+.foot-col a, .foot-col p { display: block; font-size: 0.88rem; color: var(--ink-soft); padding-block: .2rem; }
+.foot-col a:hover { color: var(--accent); text-decoration: none; }
+.foot-name { font-family: var(--serif); font-weight: 700; font-size: 1.4rem; color: var(--ink); line-height: 1; margin-bottom: .75rem; letter-spacing: -0.02em; font-variation-settings: 'opsz' 20; }
+.foot-tag { font-family: var(--serif); font-style: italic; color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 1rem; font-variation-settings: 'opsz' 14; max-width: 38ch; }
+.disclaimer { font-size: 0.78rem; color: var(--ink-faint); border-top: 1px solid var(--rule); padding-top: 1rem; line-height: 1.5; max-width: 50ch; }
+.disclaimer strong { color: var(--ink); }
+
+.colophon { border-top: 1px solid var(--rule-strong); padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; color: var(--ink-faint); }
+.colophon em { font-family: var(--serif); font-style: italic; color: var(--ink-soft); font-variation-settings: 'opsz' 10; }
+
+/* ===== Mockup notice ===== */
+.mockup-notice { background: oklch(0.9 0.04 60); border-bottom: 1px solid oklch(0.7 0.06 60); padding-block: .65rem; font-size: 0.8rem; color: oklch(0.3 0.06 50); text-align: center; font-weight: 500; }
+.mockup-notice strong { color: oklch(0.25 0.08 250); }
+
+/* ===== Anchor offset for sticky-ish nav ===== */
+section { scroll-margin-top: 1rem; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<div class="mockup-notice">
+  <strong>Mockup preview</strong> — Direction B (Clinical-data editorial). Source file: <em>mockup-editorial.html</em>. Not the live site.
+</div>
+
+<!-- ===== Masthead ===== -->
+<header class="masthead" role="banner">
+  <div class="masthead-top">
+    <div class="container">
+      <span>Vol. 01 · No. 01 · Estd. 2026</span>
+      <span class="live"><span class="live-dot" aria-hidden="true"></span>Active practice · open to engagements</span>
+      <span>An independent neurology practice</span>
+    </div>
+  </div>
+
+  <div class="nameplate">
+    <div class="container">
+      <div>
+        <div class="nameplate-name">Neil J. Patel, <em>MD MBA</em></div>
+        <div class="nameplate-sub">Sports Neurology, Brain Injury Medicine &amp; Clinical Informatics</div>
+      </div>
+      <div class="nameplate-meta">
+        <div><strong>Available</strong> · clinical roles · team advisory · consulting</div>
+        <div>Patients: clinic visits via Neura Health</div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="subnav" aria-label="Primary">
+    <div class="container">
+      <div class="subnav-links">
+        <a href="#expertise">Practice Areas</a>
+        <a href="#brain-fig">Anatomy</a>
+        <a href="#services">Services</a>
+        <a href="#research">Research Index</a>
+        <a href="#resources">Resources</a>
+        <a href="#faq">FAQ</a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+        <a href="#contact" class="btn btn-primary">Discuss engagement</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Practice statement · Spring 2026</span>
+        <h1 class="hero-headline">When the brain becomes a <em>measurable asset.</em></h1>
+        <p class="lede">Board-certified neurologist building the informatics layer underneath modern concussion care — for athletes on the sideline, organizations on the cap table, and the clinicians who run both.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Discuss a role or engagement →</a>
+          <a href="https://www.neurahealth.co" class="btn btn-ghost">Book a clinic visit ↗</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <div class="label">Currently open to</div>
+            <div class="value">Full-time clinical roles · team neurology advisory · health-system consulting</div>
+          </div>
+          <div class="hero-meta-item">
+            <div class="label">Clinical care</div>
+            <div class="value">Concussion · post-concussion syndrome · headache · second-opinion neurology, via Neura Health.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-fig" aria-label="Figure 1: the athlete brain, illustrative diagram">
+        <figure class="brain-fig">
+          <span class="fig-num">Fig. 1</span>
+          <div class="brain-svg-wrap">
+            <svg class="brain-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Outer brain outline -->
+              <path class="brain-outline"
+                d="M 90 140
+                   C 90 90, 140 65, 165 70
+                   C 175 70, 188 75, 195 82
+                   C 215 78, 240 90, 248 115
+                   C 258 128, 258 148, 250 165
+                   C 255 180, 250 200, 235 212
+                   C 232 232, 215 250, 195 252
+                   C 188 264, 170 266, 158 258
+                   C 142 268, 122 262, 115 248
+                   C 95 245, 80 226, 82 205
+                   C 70 192, 68 170, 78 155
+                   C 76 148, 82 142, 90 140 Z"/>
+              <!-- Hemisphere midline -->
+              <path class="brain-inner" d="M 165 70 C 162 100, 168 135, 162 170 C 158 200, 165 230, 158 258"/>
+              <!-- Sulci -->
+              <path class="brain-inner" d="M 102 130 C 118 138, 138 134, 155 142"/>
+              <path class="brain-inner" d="M 178 88 C 190 102, 200 118, 210 138"/>
+              <path class="brain-inner" d="M 232 152 C 240 162, 244 178, 240 192"/>
+              <path class="brain-inner" d="M 95 200 C 110 208, 130 210, 148 206"/>
+              <path class="brain-inner" d="M 178 200 C 195 208, 215 208, 230 200"/>
+              <path class="brain-inner" d="M 120 232 C 138 240, 158 240, 175 234"/>
+              <!-- Brain stem -->
+              <path class="brain-inner" d="M 152 260 C 154 272, 156 285, 158 295" stroke-width="1.4"/>
+              <!-- Inner core glow -->
+              <ellipse class="brain-core" cx="165" cy="170" rx="65" ry="78"/>
+              <!-- Synapses (pulsing dots) -->
+              <circle class="synapse" cx="115" cy="125" r="2.2"/>
+              <circle class="synapse" cx="180" cy="100" r="2.2"/>
+              <circle class="synapse" cx="220" cy="135" r="2.2"/>
+              <circle class="synapse" cx="240" cy="180" r="2.2"/>
+              <circle class="synapse" cx="210" cy="225" r="2.2"/>
+              <circle class="synapse" cx="155" cy="245" r="2.2"/>
+              <circle class="synapse" cx="105" cy="215" r="2.2"/>
+              <circle class="synapse" cx="92" cy="170" r="2.2"/>
+              <circle class="synapse" cx="145" cy="135" r="2.2"/>
+              <circle class="synapse" cx="195" cy="165" r="2.2"/>
+              <circle class="synapse" cx="175" cy="200" r="2.2"/>
+              <circle class="synapse" cx="130" cy="190" r="2.2"/>
+            </svg>
+          </div>
+          <figcaption class="brain-caption">
+            <span class="fig-cap">The athlete brain at rest — interactive anatomy diagram below.</span>
+            <span class="small-caps" style="color:var(--ink-faint)">Illustrative</span>
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Affiliations strip ===== -->
+<div class="affil" aria-label="Credentials">
+  <div class="container affil-inner">
+    <span>ABPN Board Certified · Neurology</span>
+    <span>Brain Injury Medicine</span>
+    <span>Sports Neurology Fellowship</span>
+    <span>Clinical Informatics Fellowship</span>
+  </div>
+</div>
+
+<!-- ===== Expertise (editorial spread) ===== -->
+<section id="expertise" aria-labelledby="expertise-title">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Practice areas</span>
+      <h2 id="expertise-title">Evidence-based care where neurology meets performance.</h2>
+      <p>From sideline assessment to return-to-play clearance, every decision grounded in the latest neuroscience and guided by measurable outcomes.</p>
+    </div>
+
+    <div class="expertise-grid">
+      <article class="expertise-lead">
+        <div class="area-num">i. The hero capability</div>
+        <h3>Concussion management, from sideline to return-to-play.</h3>
+        <p class="lede">Comprehensive diagnosis, recovery planning, and return-to-play protocols for athletes at every level — from youth leagues to professional sports.</p>
+        <ul>
+          <li><span class="num">01</span><span>Acute and chronic concussion evaluation, with structured symptom inventories and serial cognitive testing</span></li>
+          <li><span class="num">02</span><span>Post-concussion syndrome treatment, including targeted vestibular, oculomotor, and headache management</span></li>
+          <li><span class="num">03</span><span>Vestibular and oculomotor assessment using VOMS protocols</span></li>
+          <li><span class="num">04</span><span>Personalized return-to-play protocols aligned with Amsterdam 2022 consensus</span></li>
+          <li><span class="num">05</span><span>CTE risk counseling and longitudinal surveillance for at-risk athletes</span></li>
+        </ul>
+      </article>
+
+      <div class="expertise-side">
+        <div class="expertise-item">
+          <div class="area-num">ii.</div>
+          <h3>Sports Neurology</h3>
+          <p>Fellowship-trained care for nervous-system conditions affecting athletic performance — headache, nerve injury, movement disorders, and neuromuscular issues.</p>
+        </div>
+        <div class="expertise-item">
+          <div class="area-num">iii.</div>
+          <h3>Clinical Informatics Consulting</h3>
+          <p>Helping health systems and sports organizations design EHR workflows, neuro-registries, and data infrastructure that turn clinical data into better outcomes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="expertise-strip">
+      <div class="strip-item">
+        <div class="area-num">iv.</div>
+        <h4>Headache &amp; Migraine</h4>
+        <p>Targeted treatment for post-traumatic headache, migraine, and cervicogenic pain in athletes.</p>
+      </div>
+      <div class="strip-item">
+        <div class="area-num">v.</div>
+        <h4>Brain Health Optimization</h4>
+        <p>Cognitive performance, sleep, and neuro-wellness programs for athletes and executives.</p>
+      </div>
+      <div class="strip-item">
+        <div class="area-num">vi.</div>
+        <h4>Team &amp; Organizational Consulting</h4>
+        <p>On-demand neurology expertise for teams, leagues, and training facilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brain anatomy FIG. 2 ===== -->
+<section class="fig-section alt" id="brain-fig" aria-labelledby="brain-title">
+  <div class="container">
+    <div class="fig-header">
+      <div><span class="fig-num">Fig. 2</span><span class="small-caps" style="color:var(--ink-faint)">The athlete brain, in regions</span></div>
+      <div class="fig-source">Click any region to read its function and concussion-related symptoms.</div>
+    </div>
+
+    <h2 id="brain-title" style="margin-bottom:2rem; max-width: 30ch;">Where the impact lands.</h2>
+
+    <div class="brain-anatomy">
+      <div class="brain-diagram">
+        <svg viewBox="0 0 500 400" role="img" aria-label="Interactive diagram of the human brain showing six regions">
+          <path d="M80 200 C 80 120 150 70 250 70 C 360 70 420 130 430 200 C 440 250 420 290 380 310 C 360 340 320 355 280 350 L 270 365 C 260 372 245 372 230 368 L 200 355 C 160 345 120 320 100 290 C 85 265 80 230 80 200 Z"
+                fill="var(--surface-2)" stroke="var(--rule-strong)" stroke-width="1"/>
+          <path class="brain-region active" tabindex="0" role="button" aria-label="Frontal lobe"
+            d="M82 200 C 82 125 150 72 230 72 C 240 72 248 75 252 90 C 248 130 232 170 220 200 C 210 220 180 225 140 220 C 110 215 90 210 82 200 Z"/>
+          <text class="brain-label" x="140" y="150" text-anchor="middle">Frontal</text>
+          <path class="brain-region" tabindex="0" role="button" aria-label="Parietal lobe"
+            d="M255 90 C 260 78 330 72 370 90 C 395 110 410 140 415 180 C 418 200 400 215 360 215 C 310 215 270 205 240 195 C 235 175 245 135 255 90 Z"/>
+          <text class="brain-label" x="330" y="140" text-anchor="middle">Parietal</text>
+          <path class="brain-region" tabindex="0" role="button" aria-label="Temporal lobe"
+            d="M130 225 C 170 230 215 225 240 210 C 245 235 240 270 220 300 C 195 325 165 330 140 320 C 115 310 100 290 95 265 C 95 245 110 230 130 225 Z"/>
+          <text class="brain-label" x="170" y="280" text-anchor="middle">Temporal</text>
+          <path class="brain-region" tabindex="0" role="button" aria-label="Occipital lobe"
+            d="M360 220 C 400 220 425 230 435 255 C 440 280 425 305 390 320 C 360 330 330 325 315 310 C 300 290 305 260 320 235 C 330 225 345 220 360 220 Z"/>
+          <text class="brain-label" x="378" y="275" text-anchor="middle">Occipital</text>
+          <path class="brain-region" tabindex="0" role="button" aria-label="Cerebellum"
+            d="M240 310 C 270 315 310 320 325 335 C 330 355 315 365 285 365 C 250 365 220 355 215 335 C 215 320 225 312 240 310 Z"/>
+          <text class="brain-label" x="275" y="345" text-anchor="middle">Cerebellum</text>
+          <path class="brain-region" tabindex="0" role="button" aria-label="Brainstem"
+            d="M205 310 C 215 315 220 330 218 350 C 215 370 210 380 200 378 C 188 375 183 360 185 340 C 188 322 195 310 205 310 Z"/>
+          <text class="brain-label" x="200" y="345" text-anchor="middle">Stem</text>
+        </svg>
+      </div>
+
+      <aside class="brain-panel" aria-live="polite">
+        <span class="region-tag">Region — selected</span>
+        <h3>Frontal lobe</h3>
+        <p style="color:var(--ink-soft);font-size:0.95rem;">Executive function, decision-making, motor planning, and personality. The frontal lobe sits directly behind the forehead, the part of the skull most often impacted in athletic collisions.</p>
+
+        <h4>Core functions</h4>
+        <ul>
+          <li>Executive control and judgment</li>
+          <li>Voluntary movement (motor cortex)</li>
+          <li>Working memory and attention</li>
+          <li>Expressive language (Broca's area)</li>
+        </ul>
+
+        <h4>When injured in concussion</h4>
+        <ul>
+          <li>Difficulty concentrating; mental fog</li>
+          <li>Mood and personality changes</li>
+          <li>Impaired decision-making</li>
+          <li>Slowed reaction time</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Services (numbered list) ===== -->
+<section id="services" aria-labelledby="svc-title">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Services</span>
+      <h2 id="svc-title">How we work together.</h2>
+      <p>Four engagement shapes for individuals, teams, and institutions, remote or in person.</p>
+    </div>
+
+    <ol class="svc-list">
+      <li class="svc-item">
+        <span class="svc-num">i.</span>
+        <div class="svc-body">
+          <h3>Individual Athlete Consultation</h3>
+          <p>Second-opinion reviews, diagnostic clarification, and personalized recovery roadmaps for concussion and complex neurologic cases.</p>
+        </div>
+        <a href="#contact" class="svc-link">Request →</a>
+      </li>
+      <li class="svc-item">
+        <span class="svc-num">ii.</span>
+        <div class="svc-body">
+          <h3>Team &amp; Medical Staff Advisory</h3>
+          <p>Protocol development, medical staff education, and retained advisory roles for organizations that need deep neurology expertise on call.</p>
+        </div>
+        <a href="#contact" class="svc-link">Request →</a>
+      </li>
+      <li class="svc-item">
+        <span class="svc-num">iii.</span>
+        <div class="svc-body">
+          <h3>Clinical Informatics Engagements</h3>
+          <p>EHR optimization, clinical decision support, neuro-specific registries, and digital-health program design for health systems and startups.</p>
+        </div>
+        <a href="#contact" class="svc-link">Request →</a>
+      </li>
+      <li class="svc-item">
+        <span class="svc-num">iv.</span>
+        <div class="svc-body">
+          <h3>Expert Witness &amp; Medical Review</h3>
+          <p>Case review and expert testimony for sports-related neurologic injury litigation.</p>
+        </div>
+        <a href="#contact" class="svc-link">Request →</a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Consensus timeline FIG. 3 ===== -->
+<section class="fig-section alt" aria-labelledby="timeline-title">
+  <div class="container">
+    <div class="fig-header">
+      <div><span class="fig-num">Fig. 3</span><span class="small-caps" style="color:var(--ink-faint)">International concussion consensus, by year</span></div>
+      <div class="fig-source">Source: Concussion in Sport Group, consensus statements 2008–2022.</div>
+    </div>
+
+    <h2 id="timeline-title" style="max-width:32ch;margin-bottom:.5rem;">The standard of care is a moving target.</h2>
+    <p style="max-width:60ch;margin-bottom:.5rem;">Every four years, the Concussion in Sport Group convenes to update the international consensus on sport-related concussion management. The current standard is the Amsterdam 2022 statement, with SCAT6 as the assessment tool of record.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2008</div>
+        <div class="timeline-place">Zürich II</div>
+        <div class="timeline-desc">First widely adopted SCAT2 sideline assessment; introduction of graduated return-to-play.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2012</div>
+        <div class="timeline-place">Zürich III</div>
+        <div class="timeline-desc">SCAT3 released; child-SCAT3 published for athletes under 13.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2016</div>
+        <div class="timeline-place">Berlin</div>
+        <div class="timeline-desc">SCAT5 and Child-SCAT5; sub-symptom-threshold aerobic exercise added to recovery.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2022</div>
+        <div class="timeline-place">Amsterdam</div>
+        <div class="timeline-desc">SCAT6 and Sport Concussion Office Assessment Tool 6 (SCOAT6); current standard.</div>
+      </div>
+      <div class="timeline-item future">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2026</div>
+        <div class="timeline-place">Anticipated</div>
+        <div class="timeline-desc">Next quadrennial review expected; updates to biomarker and imaging guidance anticipated.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Symptom education tool ===== -->
+<section id="checker" aria-labelledby="checker-title">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Education tool</span>
+      <h2 id="checker-title">Concussion symptom awareness — a clinical questionnaire.</h2>
+      <p>An educational guide to help you understand common post-head-injury symptoms and when professional evaluation is recommended.</p>
+    </div>
+
+    <div class="checker">
+      <div class="checker-disclaimer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+        <div>
+          <strong>This is not medical advice.</strong>
+          <p>Educational only. Does not diagnose, treat, or replace evaluation by a qualified clinician. If you suspect a head injury, see a physician. For emergencies, call 911.</p>
+        </div>
+      </div>
+
+      <div class="checker-progress" aria-hidden="true">
+        <span class="done"></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="checker-step-label">Step 1 of 5 · Red-flag check</div>
+      <div class="checker-q">In the time since the head impact, has the person experienced any of these?</div>
+      <div class="checker-options">
+        <button type="button" class="checker-opt">Loss of consciousness, seizure, repeated vomiting, worsening headache, slurred speech, or weakness / numbness</button>
+        <button type="button" class="checker-opt">Neck pain or tenderness after injury</button>
+        <button type="button" class="checker-opt">None of the above</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Research index FIG. 4 ===== -->
+<section class="fig-section alt" id="research" aria-labelledby="research-title">
+  <div class="container">
+    <div class="fig-header">
+      <div><span class="fig-num">Fig. 4</span><span class="small-caps" style="color:var(--ink-faint)">Research index — concussion science, last 12 months</span></div>
+      <div class="fig-source">Source: National Library of Medicine (PubMed), auto-pulled on visit.</div>
+    </div>
+
+    <h2 id="research-title" style="margin-bottom:.5rem;max-width:30ch;">Concussion science, current.</h2>
+    <p style="margin-bottom:.5rem;">Indexed peer-reviewed publications on sport-related concussion, return-to-play protocols, and related neurologic outcomes, refreshed on every page load.</p>
+
+    <div class="research-dashboard">
+      <div class="dash-item">
+        <div class="dash-num">387</div>
+        <div class="dash-label">Papers indexed, last 12 mo</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num"><em>23</em></div>
+        <div class="dash-label">In top-quartile journals</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num">14</div>
+        <div class="dash-label">RCTs on RTP</div>
+      </div>
+      <div class="dash-item">
+        <div class="dash-num">6</div>
+        <div class="dash-label">Biomarker studies</div>
+      </div>
+    </div>
+
+    <ol class="research-list">
+      <li class="research-item">
+        <span class="research-num">01</span>
+        <div>
+          <div class="research-title">Acute neurometabolic biomarkers in sport-related concussion: a prospective cohort.</div>
+          <div class="research-cite"><span class="journal">JAMA Neurology</span> · 2026 Apr 12;83(4):412-420.</div>
+          <span class="research-tag">Biomarker · RCT</span>
+        </div>
+      </li>
+      <li class="research-item">
+        <span class="research-num">02</span>
+        <div>
+          <div class="research-title">Sub-symptom-threshold aerobic exercise for adolescent concussion: a 2026 update.</div>
+          <div class="research-cite"><span class="journal">British Journal of Sports Medicine</span> · 2026 Mar;60(6):318-326.</div>
+          <span class="research-tag">Return-to-play</span>
+        </div>
+      </li>
+      <li class="research-item">
+        <span class="research-num">03</span>
+        <div>
+          <div class="research-title">Cumulative subconcussive exposure and white-matter integrity in collegiate football.</div>
+          <div class="research-cite"><span class="journal">Neurology</span> · 2026 Feb;106(7):e2245-e2254.</div>
+          <span class="research-tag">Long-term outcomes</span>
+        </div>
+      </li>
+      <li class="research-item">
+        <span class="research-num">04</span>
+        <div>
+          <div class="research-title">SCOAT6 in primary-care evaluation of post-concussion symptoms.</div>
+          <div class="research-cite"><span class="journal">Annals of Family Medicine</span> · 2026 Jan;24(1):44-52.</div>
+          <span class="research-tag">Assessment tool</span>
+        </div>
+      </li>
+    </ol>
+
+    <p style="margin-top:2rem;font-size:0.85rem;color:var(--ink-faint);font-style:italic;">In production, this list auto-populates from PubMed on every page load. Titles shown here are representative.</p>
+  </div>
+</section>
+
+<!-- ===== Resource hub ===== -->
+<section id="resources" aria-labelledby="res-title">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Resource hub</span>
+      <h2 id="res-title">Evidence-based guides for athletes, parents &amp; coaches.</h2>
+      <p>Educational articles grounded in current consensus and peer-reviewed research.</p>
+    </div>
+
+    <div class="resource-grid">
+      <a href="articles/concussion-recovery-timeline.html" class="resource-card">
+        <span class="resource-tag">For parents</span>
+        <h3 class="resource-title">Concussion recovery timeline: what to expect week by week.</h3>
+        <p class="resource-dek">A practical guide to the stages of concussion recovery and what's normal at each phase.</p>
+      </a>
+      <a href="articles/return-to-play-protocol.html" class="resource-card">
+        <span class="resource-tag">For athletes</span>
+        <h3 class="resource-title">Return-to-play protocol, explained.</h3>
+        <p class="resource-dek">The six-step graduated return framework used by sports medicine professionals worldwide.</p>
+      </a>
+      <a href="articles/sideline-concussion-recognition.html" class="resource-card">
+        <span class="resource-tag">For coaches</span>
+        <h3 class="resource-title">Sideline recognition: when to remove an athlete.</h3>
+        <p class="resource-dek">Observable signs and symptoms that mandate immediate removal from play.</p>
+      </a>
+      <a href="articles/cte-vs-post-concussion-syndrome.html" class="resource-card">
+        <span class="resource-tag">Science</span>
+        <h3 class="resource-title">CTE vs. post-concussion syndrome: understanding the difference.</h3>
+        <p class="resource-dek">Two conditions often confused. Here's what current science actually says.</p>
+      </a>
+      <a href="articles/second-impact-syndrome.html" class="resource-card">
+        <span class="resource-tag">Safety</span>
+        <h3 class="resource-title">Second-impact syndrome: why rest matters.</h3>
+        <p class="resource-dek">A rare but catastrophic complication that shapes modern concussion management.</p>
+      </a>
+      <a href="articles/return-to-learn.html" class="resource-card">
+        <span class="resource-tag">Youth</span>
+        <h3 class="resource-title">Return-to-learn: managing concussion in the classroom.</h3>
+        <p class="resource-dek">Academic accommodations that support brain recovery for student-athletes.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="alt" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:2.5rem;">
+      <span class="kicker">Ask the neurologist</span>
+      <h2 id="faq-title">Frequently asked questions.</h2>
+      <p>The most common questions patients, parents, and athletes ask about concussion and brain health.</p>
+    </div>
+
+    <div class="faq-list">
+      <article class="faq-item">
+        <span class="faq-num">01</span>
+        <div>
+          <div class="faq-q">Q. What is a concussion?</div>
+          <div class="faq-a">A concussion is a mild traumatic brain injury caused by a bump, blow, or jolt to the head or body that causes the brain to move rapidly inside the skull, disrupting normal brain function.</div>
+        </div>
+      </article>
+      <article class="faq-item">
+        <span class="faq-num">02</span>
+        <div>
+          <div class="faq-q">Q. How long does a concussion take to heal?</div>
+          <div class="faq-a">Most concussions resolve within 7–14 days with proper rest and gradual return to activity. Some athletes recover in a few days; others with persistent symptoms may take weeks or months. Children and adolescents typically take longer to recover than adults.</div>
+        </div>
+      </article>
+      <article class="faq-item">
+        <span class="faq-num">03</span>
+        <div>
+          <div class="faq-q">Q. When should I go to the ER after a head injury?</div>
+          <div class="faq-a">Seek emergency care immediately for any of these red-flag symptoms: loss of consciousness, repeated vomiting, worsening headache, seizure, unequal pupils, slurred speech, weakness or numbness, confusion that worsens, or neck pain. When in doubt, get evaluated.</div>
+        </div>
+      </article>
+      <article class="faq-item">
+        <span class="faq-num">04</span>
+        <div>
+          <div class="faq-q">Q. Can you play sports the same day as a concussion?</div>
+          <div class="faq-a">No. Current consensus guidelines (Amsterdam 2022) state that any athlete with suspected concussion must be removed from play immediately and not return the same day. Return-to-play requires stepwise progression supervised by a qualified clinician.</div>
+        </div>
+      </article>
+      <article class="faq-item">
+        <span class="faq-num">05</span>
+        <div>
+          <div class="faq-q">Q. What is the difference between a concussion and post-concussion syndrome?</div>
+          <div class="faq-a">A concussion is the acute injury. Post-concussion syndrome (PCS) refers to symptoms — headache, dizziness, cognitive issues, mood changes — that persist beyond the typical 10–14 day recovery window, often requiring multidisciplinary care.</div>
+        </div>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-style:italic;color:var(--ink-faint);font-family:var(--serif);">…and ten more, in the production version of this section.</p>
+  </div>
+</section>
+
+<!-- ===== Glossary ===== -->
+<section aria-labelledby="gloss-title">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Glossary</span>
+      <h2 id="gloss-title">Concussion &amp; brain-health terminology.</h2>
+      <p>The technical language of sports neurology, translated into plain English.</p>
+    </div>
+
+    <div class="glossary">
+      <div class="glossary-item">
+        <div class="glossary-term">SCAT6 <span class="glossary-abbr">Assessment</span></div>
+        <div class="glossary-def">Sport Concussion Assessment Tool, 6th edition — the current standardized sideline and clinical evaluation for suspected concussion in athletes 13+.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">VOMS <span class="glossary-abbr">Vestibular</span></div>
+        <div class="glossary-def">Vestibular / Ocular-Motor Screening — a brief clinical exam evaluating eye movement, balance, and visual symptoms after concussion.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">RTP <span class="glossary-abbr">Return-to-Play</span></div>
+        <div class="glossary-def">Stepwise graduated protocol that guides an athlete back to competition after concussion, with each stage tolerated symptom-free before advancing.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">RTL <span class="glossary-abbr">Return-to-Learn</span></div>
+        <div class="glossary-def">Graduated return to school and cognitive work after concussion, with academic accommodations to support brain recovery.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">PCS <span class="glossary-abbr">Post-Concussion</span></div>
+        <div class="glossary-def">Post-Concussion Syndrome — persistent symptoms (headache, cognitive, mood, sleep) lasting beyond the typical 10–14 day recovery window.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">CTE <span class="glossary-abbr">Neurodegenerative</span></div>
+        <div class="glossary-def">Chronic Traumatic Encephalopathy — a progressive neurodegenerative disease associated with cumulative repetitive head impacts, diagnosed post-mortem.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">mTBI <span class="glossary-abbr">Mild TBI</span></div>
+        <div class="glossary-def">Mild Traumatic Brain Injury — the medical term encompassing concussion and other minor brain injuries, classified by clinical severity.</div>
+      </div>
+      <div class="glossary-item">
+        <div class="glossary-term">GCS <span class="glossary-abbr">Glasgow</span></div>
+        <div class="glossary-def">Glasgow Coma Scale — a 3–15 scale assessing level of consciousness; a score of 13–15 defines mild TBI / concussion.</div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:2rem;font-style:italic;color:var(--ink-faint);font-family:var(--serif);">…three more terms in the production version.</p>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="alt" aria-labelledby="about-title">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:2.5rem;">
+      <span class="kicker">About</span>
+      <h2 id="about-title">Neurologist. Informaticist. Advocate for brain health.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-prose">
+        <p>Dr. Neil J. Patel is a board-certified neurologist and fellowship-trained sports neurologist with additional board certifications in Brain Injury Medicine and Clinical Informatics. With an MBA to complement his MD, he bridges the gap between rigorous clinical care and the data systems that scale it.</p>
+
+        <div class="pull-quote">"How do we protect, measure, and optimize the athlete brain, both in the moment and across a lifetime?"</div>
+
+        <p>His practice sits at an unusual intersection: trained to make the call on the sideline, equipped to design the EHR workflow back at the clinic, and credentialed to advise the league office on what the data is actually telling them.</p>
+
+        <p>Patients see Dr. Patel for concussion, post-concussion syndrome, headache, and complex neurologic conditions through Neura Health. Organizations engage him for full-time roles, retained team advisory, clinical informatics work, and expert review.</p>
+      </div>
+
+      <div class="creds">
+        <div class="cred"><strong>MD</strong><span>Doctor of Medicine</span></div>
+        <div class="cred"><strong>MBA</strong><span>Business Administration</span></div>
+        <div class="cred"><strong>Neurology</strong><span>ABPN Board Certified</span></div>
+        <div class="cred"><strong>Brain Injury Medicine</strong><span>Board Certified</span></div>
+        <div class="cred"><strong>Sports Neurology</strong><span>Fellowship Trained</span></div>
+        <div class="cred"><strong>Clinical Informatics</strong><span>Fellowship Trained</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Dual path CTA ===== -->
+<section id="contact" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="sec-head" style="text-align:center;margin-inline:auto;margin-bottom:2.5rem;">
+      <span class="kicker" style="display:block;">Get in touch</span>
+      <h2 id="cta-title" style="margin-top:.5rem;">Two ways to work together.</h2>
+      <p style="margin-inline:auto;">Choose the path that fits. Dr. Patel partners with organizations and also sees patients clinically through Neura Health.</p>
+    </div>
+
+    <div class="dual">
+      <div class="dual-col">
+        <span class="kicker">For organizations &amp; recruiters</span>
+        <h3>Hire, advise, or consult.</h3>
+        <p>Sports teams, health systems, leagues, training facilities, and digital-health companies — engage Dr. Patel for full-time clinical roles, retained team advisory, clinical informatics work, or expert review.</p>
+        <ul>
+          <li>Full-time sports neurology &amp; brain injury medicine roles</li>
+          <li>Pro / college team neurology consultant &amp; advisory</li>
+          <li>Clinical informatics &amp; neuro-registry program design</li>
+          <li>Expert witness &amp; medical case review</li>
+        </ul>
+        <div class="btns">
+          <a href="mailto:contact@drneilpatelmd.com" class="btn btn-primary">Email Dr. Patel →</a>
+          <a href="#services" class="btn btn-ghost">View services</a>
+        </div>
+      </div>
+
+      <div class="dual-col">
+        <span class="kicker" style="color:oklch(0.45 0.12 30);">For patients</span>
+        <h3>Book a clinic visit.</h3>
+        <p>Dr. Patel sees patients for concussion, post-concussion syndrome, headache, and complex neurologic conditions through Neura Health — convenient telehealth and in-person visits.</p>
+        <ul>
+          <li>Concussion evaluation &amp; recovery planning</li>
+          <li>Post-concussion syndrome &amp; persistent symptoms</li>
+          <li>Headache, migraine, and post-traumatic headache</li>
+          <li>Second-opinion neurology consultations</li>
+        </ul>
+        <div class="btns">
+          <a href="https://www.neurahealth.co" class="btn btn-primary" style="background:oklch(0.45 0.12 30);border-color:oklch(0.45 0.12 30);">Book at Neura Health ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-name">Neil J. Patel, <em style="font-style:italic;color:var(--accent);">MD MBA</em></div>
+        <div class="foot-tag">Sports neurology, concussion care, and clinical informatics consulting.</div>
+        <div class="disclaimer"><strong>Medical disclaimer:</strong> Content on this site is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider for diagnosis and treatment.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Practice areas</h4>
+        <a href="#expertise">Concussion</a>
+        <a href="#expertise">Sports Neurology</a>
+        <a href="#expertise">Brain Health</a>
+        <a href="#expertise">Informatics</a>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <a href="#services">Athlete consults</a>
+        <a href="#services">Team advisory</a>
+        <a href="#services">Informatics</a>
+        <a href="#services">Expert review</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@drneilpatelmd.com">Email Dr. Patel</a>
+        <a href="#contact">Discuss engagement</a>
+        <a href="https://www.neurahealth.co">Book at Neura Health ↗</a>
+      </div>
+    </div>
+
+    <div class="colophon">
+      <span>© <span id="y"></span> Dr. Neil J. Patel, MD MBA. All rights reserved.</span>
+      <span><em>This site is set in Source Serif 4 and Public Sans.</em></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// Brain region toggling — visual only
+(function () {
+  var regions = document.querySelectorAll('.brain-region');
+  regions.forEach(function (r) {
+    r.addEventListener('click', function () {
+      regions.forEach(function (x) { x.classList.remove('active'); });
+      r.classList.add('active');
+    });
+    r.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        r.click();
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

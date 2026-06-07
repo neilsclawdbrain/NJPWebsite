@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-content",
+      "type": "skill-md",
+      "description": "How to discover and consume concussion-education content on drneilpatelmd.com (sitemap, article index, markdown content negotiation, citation rules).",
+      "url": "https://www.drneilpatelmd.com/.well-known/agent-skills/site-content/SKILL.md",
+      "digest": "sha256:b5d979b830227d00c0cb389215305b5219fbb64899bd220b595dd5ecabdf3c4c"
+    }
+  ]
+}

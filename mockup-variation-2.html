@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dr. Neil J. Patel MD, MBA - Sports Neurologist specializing in concussion management, brain health, and athletic performance. Board-certified Sports Neurologist and Clinical Informaticist.">
+    <meta name="theme-color" content="#0a1628">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dr. Neil J. Patel MD | Sports Neurologist">
+    <meta property="og:description" content="Sports Neurologist specializing in concussion management and brain health for athletes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://example.com/">
+
+    <title>Dr. Neil J. Patel MD | Sports Neurologist - Concussion & Brain Health Expert</title>
+
+    <style>
+        :root {
+            --navy-deep: #0a1628;
+            --navy-light: #1a2a47;
+            --blue-electric: #2d7ff9;
+            --cyan-accent: #00d4ff;
+            --white-base: #ffffff;
+            --text-dark: #0a1628;
+            --text-light: #666666;
+            --border-light: #e0e0e0;
+            --gradient-primary: linear-gradient(135deg, #2d7ff9 0%, #00d4ff 100%);
+            --gradient-dark: linear-gradient(135deg, #0a1628 0%, #1a2a47 100%);
+            --glow-blue: 0 0 30px rgba(45, 127, 249, 0.3);
+            --glow-cyan: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+            background: var(--white-base);
+            line-height: 1.6;
+        }
+
+        /* Skip to content link */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--blue-electric);
+            color: var(--white-base);
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 0 0 4px 0;
+            z-index: 9999;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 22, 40, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(45, 127, 249, 0.2);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white-base);
+            text-decoration: none;
+        }
+
+        nav .logo .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: var(--cyan-accent);
+            outline: 2px solid var(--blue-electric);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        nav .cta-button {
+            background: var(--gradient-primary);
+            color: var(--white-base);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--glow-blue);
+        }
+
+        nav .cta-button:hover,
+        nav .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-blue), 0 8px 20px rgba(45, 127, 249, 0.4);
+        }
+
+        nav .cta-button:focus {
+            outline: 2px solid var(--cyan-accent);
+            outline-offset: 2px;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        #hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+            padding: 6rem 2rem;
+            background: var(--white-base);
+            min-height: 100vh;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(45, 127, 249, 0.1);
+            border: 1px solid var(--blue-electric);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            width: fit-content;
+            font-weight: 600;
+            color: var(--blue-electric);
+            font-size: 0.9rem;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--cyan-accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .hero-left h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .hero-left p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white-base);
+            box-shadow: var(--glow-blue);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-blue), 0 8px 20px rgba(45, 127, 249, 0.4);
+        }
+
+        .btn-primary:focus {
+            outline: 2px solid var(--cyan-accent);
+            outline-offset: 2px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--blue-electric);
+            border: 2px solid var(--blue-electric);
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background: rgba(45, 127, 249, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary:focus {
+            outline: 2px solid var(--blue-electric);
+            outline-offset: 2px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .stat-box {
+            background: rgba(45, 127, 249, 0.05);
+            border: 1px solid rgba(45, 127, 249, 0.2);
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-box p {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0.5rem 0 0;
+            font-size: 0.95rem;
+        }
+
+        .hero-right {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-frame {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 60px rgba(45, 127, 249, 0.3);
+            animation: floatPhoto 3s ease-in-out infinite;
+        }
+
+        @keyframes floatPhoto {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--cyan-accent),
+                var(--blue-electric),
+                var(--cyan-accent)
+            );
+            animation: rotateBorder 4s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .photo-frame-inner {
+            width: 95%;
+            height: 95%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a2a47 0%, #0a1628 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 3rem;
+        }
+
+        .credential-badges {
+            position: absolute;
+            top: 20px;
+            right: -60px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .badge {
+            background: var(--white-base);
+            border: 2px solid var(--blue-electric);
+            border-radius: 12px;
+            padding: 0.75rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--blue-electric);
+            box-shadow: 0 4px 15px rgba(45, 127, 249, 0.2);
+            animation: slideInBadge 0.6s ease-out backwards;
+        }
+
+        .badge:nth-child(1) { animation-delay: 0.1s; }
+        .badge:nth-child(2) { animation-delay: 0.2s; }
+        .badge:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes slideInBadge {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Trusted By Strip */
+        #trusted-by {
+            background: linear-gradient(90deg, rgba(45, 127, 249, 0.05) 0%, rgba(0, 212, 255, 0.05) 100%);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            padding: 3rem 2rem;
+        }
+
+        #trusted-by .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        #trusted-by h2 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .logo-placeholder {
+            background: var(--border-light);
+            border-radius: 8px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Services Grid */
+        #services {
+            padding: 5rem 2rem;
+            background: var(--white-base);
+        }
+
+        #services .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(45, 127, 249, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(45, 127, 249, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--blue-electric);
+            box-shadow: 0 12px 40px rgba(45, 127, 249, 0.2), var(--glow-blue);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--white-base);
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-link {
+            color: var(--blue-electric);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-link:hover,
+        .service-link:focus {
+            gap: 1rem;
+            outline: 2px solid var(--blue-electric);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, rgba(45, 127, 249, 0.03) 0%, rgba(0, 212, 255, 0.03) 100%);
+        }
+
+        #about .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+        }
+
+        .about-text h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .credentials-timeline {
+            margin-top: 2rem;
+            border-left: 3px solid var(--blue-electric);
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.75rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--cyan-accent);
+            border-radius: 50%;
+            border: 3px solid var(--white-base);
+            box-shadow: 0 0 0 3px var(--blue-electric);
+        }
+
+        .timeline-item h4 {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0 0 0.25rem;
+            font-size: 1rem;
+        }
+
+        .timeline-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 500px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 3rem;
+            box-shadow: 0 20px 60px rgba(45, 127, 249, 0.2);
+        }
+
+        /* Education Hub */
+        #education {
+            padding: 5rem 2rem;
+            background: var(--white-base);
+        }
+
+        #education .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: var(--white-base);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(45, 127, 249, 0.2);
+        }
+
+        .card-header {
+            height: 8px;
+            background: var(--gradient-primary);
+        }
+
+        .education-card h3 {
+            font-size: 1.25rem;
+            margin: 0;
+            padding: 1.75rem 1.75rem 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .education-card p {
+            color: var(--text-light);
+            padding: 0.75rem 1.75rem;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .card-footer {
+            padding: 1.5rem 1.75rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        /* Gallery */
+        #gallery {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, rgba(45, 127, 249, 0.03) 0%, rgba(0, 212, 255, 0.03) 100%);
+        }
+
+        #gallery .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding: 2rem 0;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: var(--blue-electric) transparent;
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .gallery-scroll::-webkit-scrollbar-thumb {
+            background: var(--blue-electric);
+            border-radius: 4px;
+        }
+
+        .gallery-item {
+            flex: 0 0 300px;
+            height: 300px;
+            background: var(--border-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Consulting Section */
+        #consulting {
+            padding: 5rem 2rem;
+            background: var(--gradient-dark);
+            color: var(--white-base);
+        }
+
+        #consulting .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+        }
+
+        .consulting-text h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .consulting-text p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .consulting-services {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .consulting-services li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .consulting-services li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--cyan-accent);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .consulting-form {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .consulting-form h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--white-base);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--white-base);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            color: var(--white-base);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: 2px solid var(--cyan-accent);
+            outline-offset: 2px;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--cyan-accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.25rem;
+            padding-right: 2.5rem;
+        }
+
+        .form-submit {
+            background: var(--gradient-primary);
+            color: var(--white-base);
+            padding: 0.875rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: var(--glow-blue);
+        }
+
+        .form-submit:hover,
+        .form-submit:focus {
+            transform: translateY(-2px);
+            box-shadow: var(--glow-blue), 0 8px 20px rgba(45, 127, 249, 0.4);
+        }
+
+        .form-submit:focus {
+            outline: 2px solid var(--cyan-accent);
+            outline-offset: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-deep);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(45, 127, 249, 0.2);
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--white-base);
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover,
+        .footer-column a:focus {
+            color: var(--cyan-accent);
+            outline: 2px solid var(--blue-electric);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(45, 127, 249, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            #hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: 4rem 2rem;
+            }
+
+            .hero-right {
+                height: 400px;
+            }
+
+            .photo-frame {
+                width: 300px;
+                height: 300px;
+            }
+
+            .credential-badges {
+                position: static;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+
+            #about .container,
+            #consulting .container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-left h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.75rem;
+            }
+
+            #hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero-left h1 {
+                font-size: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .consulting-form {
+                padding: 1.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Accessibility - High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --blue-electric: #0047ab;
+                --cyan-accent: #008080;
+                --border-light: #333333;
+            }
+
+            .service-card,
+            .education-card {
+                border-width: 2px;
+            }
+
+            nav {
+                border-bottom-width: 2px;
+            }
+        }
+
+        /* Accessibility - Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Schema.org JSON-LD */
+        script[type="application/ld+json"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav role="banner">
+        <div class="container">
+            <a href="#" class="logo">Dr. <span class="highlight">Neil J. Patel</span></a>
+            <ul role="navigation">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Specialties</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#consulting">Contact</a></li>
+                <li><button class="cta-button">Consulting CTA</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main" role="main">
+        <!-- Hero Section -->
+        <section id="hero" role="region" aria-label="Hero">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    Sports Neurologist
+                </div>
+                <h1>Where Neuroscience Meets Athletic Performance</h1>
+                <p>Board-certified Sports Neurologist with dual expertise in clinical medicine and health informatics. Dedicated to optimizing brain health and performance for athletes at all levels.</p>
+
+                <div class="hero-ctas">
+                    <button class="btn-primary" aria-label="Book a consultation with Dr. Patel">
+                        Book Consultation
+                    </button>
+                    <button class="btn-secondary" aria-label="Learn more about Dr. Patel's services">
+                        Learn More →
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <p>Board Certified</p>
+                    </div>
+                    <div class="stat-box">
+                        <p>Sports Neuro Fellow</p>
+                    </div>
+                    <div class="stat-box">
+                        <p>Brain Injury Med</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="photo-frame">
+                    <div class="photo-frame-inner">
+                        📸
+                    </div>
+                </div>
+                <div class="credential-badges">
+                    <div class="badge">MD, MBA</div>
+                    <div class="badge">ABPN Certified</div>
+                    <div class="badge">Clinical Informaticist</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted By Strip -->
+        <section id="trusted-by" role="region" aria-label="Trusted by organizations">
+            <div class="container">
+                <h2>Available for Professional & Collegiate Teams</h2>
+                <div class="logo-grid">
+                    <div class="logo-placeholder">NFL</div>
+                    <div class="logo-placeholder">NBA</div>
+                    <div class="logo-placeholder">NCAA</div>
+                    <div class="logo-placeholder">MLS</div>
+                    <div class="logo-placeholder">NHL</div>
+                    <div class="logo-placeholder">Olympic Committee</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" role="region" aria-label="Services and specialties">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Clinical Services & Expertise</h2>
+                    <p>Comprehensive neurological care tailored to athletes and active individuals</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🧠</div>
+                        <h3>Concussion Management</h3>
+                        <p>Evidence-based diagnosis, treatment, and return-to-play protocols with advanced neuroimaging and cognitive assessment.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h3>Sports Headaches</h3>
+                        <p>Specialized management of migraine, tension, and exertional headaches affecting athletic performance.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">💪</div>
+                        <h3>Brain Health & Performance</h3>
+                        <p>Optimizing cognitive function, sleep quality, and neurological wellness for peak athletic performance.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🔄</div>
+                        <h3>Nerve & Muscle Injuries</h3>
+                        <p>Diagnosis and management of peripheral nerve injuries, neuropathies, and neuromuscular conditions in athletes.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">📊</div>
+                        <h3>Clinical Informatics Consulting</h3>
+                        <p>Healthcare IT strategy, EHR optimization, and data analytics for sports medicine and neurology practices.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🏆</div>
+                        <h3>Team & League Programs</h3>
+                        <p>Comprehensive neurological care programs for professional teams, colleges, and athletic organizations.</p>
+                        <a href="#" class="service-link">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" role="region" aria-label="About Dr. Patel">
+            <div class="container">
+                <div class="about-text">
+                    <h2>Dual Expertise in Neurology & Informatics</h2>
+                    <p>Dr. Patel brings a unique combination of clinical excellence and technological innovation to sports neurological care. With extensive training in both neurology and health informatics, he bridges the gap between cutting-edge clinical practice and data-driven healthcare solutions.</p>
+                    <p>His approach combines traditional neurological expertise with modern analytics, artificial intelligence applications, and health information systems to deliver superior patient outcomes and organizational efficiency.</p>
+
+                    <div class="credentials-timeline">
+                        <div class="timeline-item">
+                            <h4>MD - Internal Medicine & Neurology</h4>
+                            <p>Top-tier medical school and residency training</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>MBA - Healthcare Administration</h4>
+                            <p>Strategic leadership in healthcare organizations</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Board Certification - Neurology</h4>
+                            <p>ABPN certification in general neurology</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Sports Neurology Fellowship</h4>
+                            <p>Specialized training in sports neurological injuries</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Brain Injury Medicine Board Certification</h4>
+                            <p>Specialized credentials in traumatic brain injury</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Clinical Informaticist Certification</h4>
+                            <p>AMIA certification in clinical informatics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-photo">
+                    📷
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Hub -->
+        <section id="education" role="region" aria-label="Educational resources">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Educational Resources</h2>
+                    <p>Evidence-based information for athletes, coaches, and healthcare professionals</p>
+                </div>
+
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="card-header"></div>
+                        <h3>Understanding Concussions</h3>
+                        <p>Comprehensive guide to concussion mechanisms, symptoms, diagnosis, and return-to-play protocols based on latest research.</p>
+                        <div class="card-footer">
+                            <a href="#" class="service-link">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="card-header"></div>
+                        <h3>Return-to-Play Science</h3>
+                        <p>Evidence-based approach to graduated return-to-play protocols, rehabilitation strategies, and when athletes can safely resume activity.</p>
+                        <div class="card-footer">
+                            <a href="#" class="service-link">Read Article →</a>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="card-header"></div>
+                        <h3>Brain Health for Athletes</h3>
+                        <p>Optimize cognitive function through sleep, nutrition, stress management, and preventive strategies for peak athletic performance.</p>
+                        <div class="card-footer">
+                            <a href="#" class="service-link">Read Article →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" role="region" aria-label="Photo gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Clinical Practice & Speaking Engagements</h2>
+                    <p>From team sidelines to international conferences</p>
+                </div>
+
+                <div class="gallery-scroll" tabindex="0" role="region" aria-label="Horizontal scrollable gallery">
+                    <div class="gallery-item">Photo 1</div>
+                    <div class="gallery-item">Photo 2</div>
+                    <div class="gallery-item">Photo 3</div>
+                    <div class="gallery-item">Photo 4</div>
+                    <div class="gallery-item">Photo 5</div>
+                    <div class="gallery-item">Photo 6</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consulting Section -->
+        <section id="consulting" role="region" aria-label="Consulting services">
+            <div class="container">
+                <div class="consulting-text">
+                    <h2>Sports Medicine & Informatics Consulting</h2>
+                    <p>Dr. Patel provides comprehensive consulting services for athletic organizations, hospitals, and healthcare systems looking to optimize their neurological care and health information systems.</p>
+
+                    <ul class="consulting-services">
+                        <li>Concussion protocol development & implementation</li>
+                        <li>Brain health and performance optimization programs</li>
+                        <li>Clinical informatics strategy and EHR optimization</li>
+                        <li>Expert speaking and educational workshops</li>
+                        <li>Research collaboration and outcome analysis</li>
+                        <li>Athletic organization health system partnerships</li>
+                    </ul>
+                </div>
+
+                <form class="consulting-form" role="form" aria-label="Consulting inquiry form">
+                    <h3>Request a Consultation</h3>
+
+                    <div class="form-group">
+                        <label for="name" aria-required="true">Full Name *</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" aria-required="true">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" placeholder="Team, Hospital, or Organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiry-type" aria-required="true">Inquiry Type *</label>
+                        <select id="inquiry-type" name="inquiry-type" required aria-required="true">
+                            <option value="">Select an inquiry type...</option>
+                            <option value="clinical-sports">Clinical Sports Neurology</option>
+                            <option value="team-programs">Team Programs & Consulting</option>
+                            <option value="informatics">Informatics Consulting</option>
+                            <option value="speaking">Speaking/Educational</option>
+                            <option value="research">Research Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" aria-required="true">Message *</label>
+                        <textarea id="message" name="message" required aria-required="true" placeholder="Tell us about your consulting needs..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Dr. Neil J. Patel, MD, MBA</h4>
+                    <p>Sports Neurologist & Clinical Informaticist</p>
+                    <p>Specializing in concussion management, brain health, and performance optimization for athletes and athletic organizations.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#consulting">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Conditions Treated</h4>
+                    <ul>
+                        <li><a href="#">Concussion & TBI</a></li>
+                        <li><a href="#">Sports Headaches</a></li>
+                        <li><a href="#">Nerve Injuries</a></li>
+                        <li><a href="#">Brain Health</a></li>
+                        <li><a href="#">Performance Optimization</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Research Gate</a></li>
+                        <li><a href="#">Publications</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dr. Neil J. Patel, MD, MBA. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Neil J. Patel, MD, MBA",
+        "image": "https://example.com/dr-patel.jpg",
+        "description": "Sports Neurologist specializing in concussion management, brain health, and athletic performance",
+        "jobTitle": "Sports Neurologist & Clinical Informaticist",
+        "medicalSpecialty": ["Neurology", "Sports Medicine"],
+        "award": ["Board Certified Neurologist", "Sports Neurology Fellowship", "Brain Injury Medicine Board Certified"],
+        "url": "https://example.com",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "email": "contact@example.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Street Address",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "Zip Code",
+            "addressCountry": "US"
+        },
+        "knowsAbout": ["Concussion", "Traumatic Brain Injury", "Sports Neurology", "Clinical Informatics", "Return-to-Play", "Brain Health"],
+        "sameAs": [
+            "https://linkedin.com/in/example",
+            "https://twitter.com/example"
+        ]
+    }
+    </script>
+</body>
+</html>

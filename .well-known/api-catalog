@@ -1,0 +1,27 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.drneilpatelmd.com/",
+      "service-doc": [
+        {
+          "href": "https://www.drneilpatelmd.com/.well-known/agent-skills/site-content/SKILL.md",
+          "type": "text/markdown",
+          "title": "How agents should consume this site's content"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://www.drneilpatelmd.com/sitemap.xml",
+          "type": "application/xml",
+          "title": "Sitemap of all canonical content URLs"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://www.drneilpatelmd.com/",
+          "title": "Homepage (HTTP 200 indicates the site is healthy)"
+        }
+      ]
+    }
+  ]
+}
