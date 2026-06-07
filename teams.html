@@ -194,13 +194,17 @@ footer a:hover{color:var(--primary)}
     </a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu"><svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     <nav class="nav-links" id="primaryNav" aria-label="Primary">
-      <a href="athletes.html">For Athletes</a>
-      <a href="teams.html">For Teams</a>
-      <a href="index.html#expertise">Expertise</a>
-      <a href="index.html#resources">Resources</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact" class="btn btn-primary">Discuss Engagement</a>
+      <a href="athletes.html" data-es="Atletas">For Athletes</a>
+      <a href="teams.html" data-es="Equipos">For Teams</a>
+      <a href="index.html#expertise" data-es="Experiencia">Expertise</a>
+      <a href="index.html#resources" data-es="Recursos">Resources</a>
+      <a href="index.html#faq" data-es="Preguntas frecuentes">FAQ</a>
+      <a href="index.html#about" data-es="Acerca de">About</a>
+      <button type="button" id="langToggle" class="btn btn-ghost" aria-label="Ver este sitio en español" style="padding:.5rem .85rem;font-size:.85rem;min-height:40px;cursor:pointer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+        <span id="langLabel">Español</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary" data-es="Discutir colaboración">Discuss Engagement</a>
     </nav>
   </div>
 </header>
@@ -210,11 +214,11 @@ footer a:hover{color:var(--primary)}
 <!-- ===== HERO ===== -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="container">
-    <h1 id="hero-title">Team Neurology Services</h1>
-    <p class="hero-sub">On-site concussion assessment, return-to-play protocol development, and expert sideline decision support for athletic teams, colleges, and sports organizations. Get your staff trained and your athletes back in the game safely.</p>
+    <h1 id="hero-title" data-es="Servicios de neurología para equipos">Team Neurology Services</h1>
+    <p class="hero-sub" data-es="Evaluación de conmociones en el sitio, desarrollo de protocolos de regreso al juego y apoyo experto para decisiones al borde del campo, para equipos deportivos, universidades y organizaciones. Capacita a tu personal y devuelve a tus atletas al juego de forma segura.">On-site concussion assessment, return-to-play protocol development, and expert sideline decision support for athletic teams, colleges, and sports organizations. Get your staff trained and your athletes back in the game safely.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Discuss Team Partnership</a>
-      <a href="index.html#services" class="btn btn-ghost">View Services</a>
+      <a href="#contact" class="btn btn-primary" data-es="Discutir colaboración de equipo">Discuss Team Partnership</a>
+      <a href="index.html#services" class="btn btn-ghost" data-es="Ver servicios">View Services</a>
     </div>
   </div>
 </section>
@@ -223,22 +227,22 @@ footer a:hover{color:var(--primary)}
 <section aria-labelledby="svc-title">
   <div class="container">
     <div class="sec-head">
-      <span class="mono">What We Offer Teams</span>
-      <h2 id="svc-title">Comprehensive Neurology Support for Athletics</h2>
-      <p>From protocol development to sideline decisions to staff training — we partner with your organization to ensure every athlete gets evidence-based concussion care.</p>
+      <span class="mono" data-es="Qué ofrecemos a los equipos">What We Offer Teams</span>
+      <h2 id="svc-title" data-es="Apoyo integral de neurología para el deporte">Comprehensive Neurology Support for Athletics</h2>
+      <p data-es="Desde el desarrollo de protocolos hasta decisiones al borde del campo y capacitación del personal — nos asociamos con tu organización para asegurar que cada atleta reciba atención de conmociones basada en evidencia.">From protocol development to sideline decisions to staff training — we partner with your organization to ensure every athlete gets evidence-based concussion care.</p>
     </div>
     <div class="bento">
       <article class="reveal card b-wide" aria-labelledby="c-protocol">
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
         </div>
-        <h3 id="c-protocol">Return-to-Play Protocol Development</h3>
-        <p>We help your organization create and implement evidence-based RTP protocols aligned with Amsterdam Consensus guidelines, customized for your sports and your staff's capabilities.</p>
+        <h3 id="c-protocol" data-es="Desarrollo de protocolos de regreso al juego">Return-to-Play Protocol Development</h3>
+        <p data-es="Ayudamos a tu organización a crear e implementar protocolos RTP basados en evidencia, alineados con el Consenso de Ámsterdam y adaptados a tus deportes y a las capacidades de tu personal.">We help your organization create and implement evidence-based RTP protocols aligned with Amsterdam Consensus guidelines, customized for your sports and your staff's capabilities.</p>
         <ul>
-          <li>Protocol design for your specific sports</li>
-          <li>Integration with existing medical workflows</li>
-          <li>Documentation and tracking systems</li>
-          <li>Staff alignment and sign-off</li>
+          <li data-es="Diseño de protocolos para tus deportes específicos">Protocol design for your specific sports</li>
+          <li data-es="Integración con flujos de trabajo médicos existentes">Integration with existing medical workflows</li>
+          <li data-es="Sistemas de documentación y seguimiento">Documentation and tracking systems</li>
+          <li data-es="Alineación y aprobación del personal">Staff alignment and sign-off</li>
         </ul>
       </article>
 
@@ -246,13 +250,13 @@ footer a:hover{color:var(--primary)}
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M17 11a3 3 0 1 0 0-6M2 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2M22 21v-2a5 5 0 0 0-3-4.58"/></svg>
         </div>
-        <h3 id="c-sideline">Sideline Assessment & Medical Staff Support</h3>
-        <p>Same-day or next-day evaluation of suspected concussions. Available for events, on-call for emergencies, and present at key competitions to provide immediate expert assessment.</p>
+        <h3 id="c-sideline" data-es="Evaluación al borde del campo y apoyo al personal médico">Sideline Assessment & Medical Staff Support</h3>
+        <p data-es="Evaluación el mismo día o al día siguiente de conmociones sospechadas. Disponible para eventos, de guardia para emergencias y presente en competencias clave para brindar evaluación experta inmediata.">Same-day or next-day evaluation of suspected concussions. Available for events, on-call for emergencies, and present at key competitions to provide immediate expert assessment.</p>
         <ul>
-          <li>On-site concussion evaluation</li>
-          <li>Immediate return-to-play decision</li>
-          <li>Real-time medical staff consultation</li>
-          <li>Event coverage for competitions</li>
+          <li data-es="Evaluación de conmociones en el sitio">On-site concussion evaluation</li>
+          <li data-es="Decisión inmediata de regreso al juego">Immediate return-to-play decision</li>
+          <li data-es="Consulta en tiempo real con el personal médico">Real-time medical staff consultation</li>
+          <li data-es="Cobertura de eventos para competencias">Event coverage for competitions</li>
         </ul>
       </article>
 
@@ -260,13 +264,13 @@ footer a:hover{color:var(--primary)}
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
-        <h3 id="c-training">Medical Staff Training & Education</h3>
-        <p>Empower your athletic trainers, coaches, and medical staff with the latest concussion recognition, assessment, and management protocols backed by current science.</p>
+        <h3 id="c-training" data-es="Capacitación y educación del personal médico">Medical Staff Training & Education</h3>
+        <p data-es="Capacita a tus entrenadores atléticos, entrenadores y personal médico con los protocolos más recientes de reconocimiento, evaluación y manejo de conmociones, respaldados por la ciencia actual.">Empower your athletic trainers, coaches, and medical staff with the latest concussion recognition, assessment, and management protocols backed by current science.</p>
         <ul>
-          <li>Sideline concussion recognition training</li>
-          <li>Baseline testing coordination</li>
-          <li>Return-to-play protocol workshops</li>
-          <li>Annual continuing education updates</li>
+          <li data-es="Capacitación en reconocimiento de conmociones al borde del campo">Sideline concussion recognition training</li>
+          <li data-es="Coordinación de pruebas de referencia">Baseline testing coordination</li>
+          <li data-es="Talleres de protocolos de regreso al juego">Return-to-play protocol workshops</li>
+          <li data-es="Actualizaciones anuales de educación continua">Annual continuing education updates</li>
         </ul>
       </article>
 
@@ -274,13 +278,13 @@ footer a:hover{color:var(--primary)}
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4"/></svg>
         </div>
-        <h3 id="c-consulting">Retained Team Neurologist Advisory</h3>
-        <p>Ongoing retainer relationship for high-stakes decisions, complex cases, and season-long support. Have direct access to neurology expertise when you need it.</p>
+        <h3 id="c-consulting" data-es="Asesoría retenida de neurólogo de equipo">Retained Team Neurologist Advisory</h3>
+        <p data-es="Relación de asesoría continua para decisiones de alto riesgo, casos complejos y apoyo durante toda la temporada. Acceso directo a experiencia en neurología cuando la necesites.">Ongoing retainer relationship for high-stakes decisions, complex cases, and season-long support. Have direct access to neurology expertise when you need it.</p>
         <ul>
-          <li>Available for consultation calls</li>
-          <li>Case review and second opinions</li>
-          <li>Return-to-play clearance decisions</li>
-          <li>Annual protocol review and updates</li>
+          <li data-es="Disponible para llamadas de consulta">Available for consultation calls</li>
+          <li data-es="Revisión de casos y segundas opiniones">Case review and second opinions</li>
+          <li data-es="Decisiones de autorización de regreso al juego">Return-to-play clearance decisions</li>
+          <li data-es="Revisión y actualización anual de protocolos">Annual protocol review and updates</li>
         </ul>
       </article>
 
@@ -288,16 +292,16 @@ footer a:hover{color:var(--primary)}
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
         </div>
-        <h3 id="c-baseline">Baseline Testing & Coordination</h3>
-        <p>Help coordinate neuropsychological baseline testing (ImPACT, CNS Vital Signs, etc.) for your athlete population before injuries occur.</p>
+        <h3 id="c-baseline" data-es="Pruebas de referencia y coordinación">Baseline Testing & Coordination</h3>
+        <p data-es="Ayuda para coordinar pruebas neuropsicológicas de referencia (ImPACT, CNS Vital Signs, etc.) para tu población de atletas antes de que ocurran lesiones.">Help coordinate neuropsychological baseline testing (ImPACT, CNS Vital Signs, etc.) for your athlete population before injuries occur.</p>
       </article>
 
       <article class="reveal card b-half" aria-labelledby="c-policy">
         <div class="card-icon" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 10h16M10 4v16"/></svg>
         </div>
-        <h3 id="c-policy">Policy Development & Risk Management</h3>
-        <p>Design concussion policies aligned with state law, insurance requirements, and best practices in athletic safety and liability management.</p>
+        <h3 id="c-policy" data-es="Desarrollo de políticas y gestión de riesgos">Policy Development & Risk Management</h3>
+        <p data-es="Diseño de políticas de conmoción alineadas con la ley estatal, los requisitos de seguros y las mejores prácticas en seguridad deportiva y gestión de responsabilidad.">Design concussion policies aligned with state law, insurance requirements, and best practices in athletic safety and liability management.</p>
       </article>
     </div>
   </div>
@@ -307,29 +311,29 @@ footer a:hover{color:var(--primary)}
 <section style="background:var(--bg-2);border-block:1px solid var(--border)" aria-labelledby="why-title">
   <div class="container">
     <div class="sec-head">
-      <span class="mono">Why Athletic Programs Choose Dr. Patel</span>
-      <h2 id="why-title">Specialist Expertise + Team Partnership</h2>
-      <p>Not just a physician-on-call. A dedicated sports neurology partner who understands athletics, athlete culture, and the pressures your program faces.</p>
+      <span class="mono" data-es="Por qué los programas deportivos eligen al Dr. Patel">Why Athletic Programs Choose Dr. Patel</span>
+      <h2 id="why-title" data-es="Experiencia especializada + colaboración de equipo">Specialist Expertise + Team Partnership</h2>
+      <p data-es="No solo un médico de guardia. Un socio dedicado de neurología deportiva que comprende el deporte, la cultura del atleta y las presiones que enfrenta tu programa.">Not just a physician-on-call. A dedicated sports neurology partner who understands athletics, athlete culture, and the pressures your program faces.</p>
     </div>
     <div class="bento">
       <article class="card b-half">
-        <h3>Board-Certified Expertise</h3>
-        <p>Board-certified in Neurology and Brain Injury Medicine, fellowship-trained in Sports Neurology. The clinical credentials matter when making return-to-play decisions.</p>
+        <h3 data-es="Experiencia certificada por la junta">Board-Certified Expertise</h3>
+        <p data-es="Certificado por la junta en Neurología y Medicina de Lesión Cerebral, con formación de subespecialidad en Neurología Deportiva. Las credenciales clínicas importan al tomar decisiones de regreso al juego.">Board-certified in Neurology and Brain Injury Medicine, fellowship-trained in Sports Neurology. The clinical credentials matter when making return-to-play decisions.</p>
       </article>
 
       <article class="card b-half">
-        <h3>Evidence-Based Approach</h3>
-        <p>All recommendations grounded in Amsterdam Consensus guidelines, AMSSM standards, and current neuroscience. No outdated myths or coach-driven shortcuts.</p>
+        <h3 data-es="Enfoque basado en evidencia">Evidence-Based Approach</h3>
+        <p data-es="Todas las recomendaciones se basan en el Consenso de Ámsterdam, los estándares de la AMSSM y la neurociencia actual. Sin mitos obsoletos ni atajos impulsados por entrenadores.">All recommendations grounded in Amsterdam Consensus guidelines, AMSSM standards, and current neuroscience. No outdated myths or coach-driven shortcuts.</p>
       </article>
 
       <article class="card b-half">
-        <h3>Athlete-First Care</h3>
-        <p>Specializes in concussion management for active athletes at all levels. Understands performance, competitive pressures, and the desire to return quickly.</p>
+        <h3 data-es="Atención centrada en el atleta">Athlete-First Care</h3>
+        <p data-es="Especializado en el manejo de conmociones para atletas activos de todos los niveles. Comprende el rendimiento, las presiones competitivas y el deseo de regresar pronto.">Specializes in concussion management for active athletes at all levels. Understands performance, competitive pressures, and the desire to return quickly.</p>
       </article>
 
       <article class="card b-half">
-        <h3>Available & Responsive</h3>
-        <p>Flexible engagement models — from event coverage to retainer relationships. Same-day evaluation for urgent cases. Direct communication with your medical staff.</p>
+        <h3 data-es="Disponible y receptivo">Available & Responsive</h3>
+        <p data-es="Modelos de colaboración flexibles — desde cobertura de eventos hasta relaciones de asesoría. Evaluación el mismo día para casos urgentes. Comunicación directa con tu personal médico.">Flexible engagement models — from event coverage to retainer relationships. Same-day evaluation for urgent cases. Direct communication with your medical staff.</p>
       </article>
     </div>
   </div>
@@ -339,34 +343,34 @@ footer a:hover{color:var(--primary)}
 <section aria-labelledby="how-title">
   <div class="container">
     <div class="sec-head">
-      <span class="mono">Getting Started</span>
-      <h2 id="how-title">Simple Engagement Process</h2>
-      <p>From initial discussion to protocol implementation, we work at your pace.</p>
+      <span class="mono" data-es="Cómo comenzar">Getting Started</span>
+      <h2 id="how-title" data-es="Proceso de colaboración sencillo">Simple Engagement Process</h2>
+      <p data-es="Desde la conversación inicial hasta la implementación del protocolo, trabajamos a tu ritmo.">From initial discussion to protocol implementation, we work at your pace.</p>
     </div>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem">
       <div style="background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:var(--radius);padding:2rem">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:rgba(34,211,238,.12);border-radius:10px;color:var(--primary);font-weight:700;margin-bottom:1rem">1</span>
-        <h3>Discovery Call</h3>
-        <p style="margin-top:.75rem">We learn about your program, your current protocols, your challenges, and your goals.</p>
+        <h3 data-es="Llamada de descubrimiento">Discovery Call</h3>
+        <p style="margin-top:.75rem" data-es="Conocemos tu programa, tus protocolos actuales, tus desafíos y tus metas.">We learn about your program, your current protocols, your challenges, and your goals.</p>
       </div>
 
       <div style="background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:var(--radius);padding:2rem">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:rgba(34,211,238,.12);border-radius:10px;color:var(--primary);font-weight:700;margin-bottom:1rem">2</span>
-        <h3>Proposal & Planning</h3>
-        <p style="margin-top:.75rem">We propose a customized engagement — protocol development, event coverage, retainer structure, or combination.</p>
+        <h3 data-es="Propuesta y planificación">Proposal & Planning</h3>
+        <p style="margin-top:.75rem" data-es="Proponemos una colaboración personalizada — desarrollo de protocolos, cobertura de eventos, estructura de asesoría o una combinación.">We propose a customized engagement — protocol development, event coverage, retainer structure, or combination.</p>
       </div>
 
       <div style="background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:var(--radius);padding:2rem">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:rgba(34,211,238,.12);border-radius:10px;color:var(--primary);font-weight:700;margin-bottom:1rem">3</span>
-        <h3>Implementation</h3>
-        <p style="margin-top:.75rem">Staff training, protocol rollout, baseline testing coordination, and full integration into your workflows.</p>
+        <h3 data-es="Implementación">Implementation</h3>
+        <p style="margin-top:.75rem" data-es="Capacitación del personal, despliegue del protocolo, coordinación de pruebas de referencia e integración completa en tus flujos de trabajo.">Staff training, protocol rollout, baseline testing coordination, and full integration into your workflows.</p>
       </div>
 
       <div style="background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:var(--radius);padding:2rem">
         <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:rgba(34,211,238,.12);border-radius:10px;color:var(--primary);font-weight:700;margin-bottom:1rem">4</span>
-        <h3>Ongoing Support</h3>
-        <p style="margin-top:.75rem">Sideline coverage, case consultation, annual protocol review, and continued education updates.</p>
+        <h3 data-es="Apoyo continuo">Ongoing Support</h3>
+        <p style="margin-top:.75rem" data-es="Cobertura al borde del campo, consulta de casos, revisión anual del protocolo y actualizaciones de educación continua.">Sideline coverage, case consultation, annual protocol review, and continued education updates.</p>
       </div>
     </div>
   </div>
@@ -375,20 +379,20 @@ footer a:hover{color:var(--primary)}
 <!-- ===== For Individual Athletes ===== -->
 <section style="background:var(--bg-2);border-block:1px solid var(--border);text-align:center">
   <div class="container">
-    <h2>Individual Athlete Care</h2>
-    <p style="max-width:56ch;margin:1rem auto;color:var(--fg-muted)">For individual athletes seeking expert concussion evaluation, return-to-play guidance, and specialized neurologic care, visit the athlete-focused resources.</p>
-    <a href="athletes.html" class="btn btn-ghost">For Individual Athletes →</a>
+    <h2 data-es="Atención individual del atleta">Individual Athlete Care</h2>
+    <p style="max-width:56ch;margin:1rem auto;color:var(--fg-muted)" data-es="Para atletas individuales que buscan evaluación experta de conmociones, orientación de regreso al juego y atención neurológica especializada, visita los recursos para atletas.">For individual athletes seeking expert concussion evaluation, return-to-play guidance, and specialized neurologic care, visit the athlete-focused resources.</p>
+    <a href="athletes.html" class="btn btn-ghost" data-es="Para atletas individuales →">For Individual Athletes →</a>
   </div>
 </section>
 
 <!-- ===== CTA ===== -->
 <section id="contact" class="cta">
   <div class="container">
-    <h2>Ready to Partner?</h2>
-    <p>Let's discuss how specialized sports neurology expertise can strengthen your program's concussion care and athlete outcomes.</p>
+    <h2 data-es="¿Listo para colaborar?">Ready to Partner?</h2>
+    <p data-es="Conversemos sobre cómo la experiencia especializada en neurología deportiva puede fortalecer la atención de conmociones y los resultados de los atletas de tu programa.">Let's discuss how specialized sports neurology expertise can strengthen your program's concussion care and athlete outcomes.</p>
     <div class="cta-row">
-      <a href="mailto:contact@drneilpatelmd.com?subject=Team%20Neurology%20Partnership%20Inquiry" class="btn btn-primary">Email to Discuss</a>
-      <a href="index.html#contact" class="btn btn-ghost">Contact Form</a>
+      <a href="mailto:contact@drneilpatelmd.com?subject=Team%20Neurology%20Partnership%20Inquiry" class="btn btn-primary" data-es="Enviar correo">Email to Discuss</a>
+      <a href="index.html#contact" class="btn btn-ghost" data-es="Formulario de contacto">Contact Form</a>
     </div>
   </div>
 </section>
@@ -428,6 +432,31 @@ footer a:hover{color:var(--primary)}
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 <script>
 (function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('primaryNav');if(!t||!n)return;function close(){n.classList.remove('open');t.setAttribute('aria-expanded','false')}t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});n.addEventListener('click',function(e){if(e.target.closest('a'))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();t.focus()}});window.addEventListener('resize',function(){if(window.innerWidth>1080)close()});})();
+</script>
+<script>
+/* ===== Inline EN/ES language toggle ===== */
+(function(){
+  var originals = new WeakMap();
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('preferredLang', lang); } catch(e){}
+    document.querySelectorAll('[data-es]').forEach(function(el){
+      if(!originals.has(el)) originals.set(el, el.innerHTML);
+      el.innerHTML = (lang === 'es') ? el.dataset.es : originals.get(el);
+    });
+    var label = document.getElementById('langLabel');
+    if(label) label.textContent = (lang === 'es') ? 'English' : 'Español';
+  }
+  function init(){
+    var btn = document.getElementById('langToggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){ setLang(document.documentElement.lang === 'es' ? 'en' : 'es'); });
+    var saved = null;
+    try { saved = localStorage.getItem('preferredLang'); } catch(e){}
+    if(saved === 'es') setLang('es');
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
 </script>
 </body>
 </html>

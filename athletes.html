@@ -181,13 +181,17 @@ footer a:hover{color:var(--primary)}
     </a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu"><svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
     <nav class="nav-links" id="primaryNav" aria-label="Primary">
-      <a href="athletes.html">For Athletes</a>
-      <a href="teams.html">For Teams</a>
-      <a href="index.html#expertise">Expertise</a>
-      <a href="index.html#resources">Resources</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact" class="btn btn-primary">Discuss Engagement</a>
+      <a href="athletes.html" data-es="Atletas">For Athletes</a>
+      <a href="teams.html" data-es="Equipos">For Teams</a>
+      <a href="index.html#expertise" data-es="Experiencia">Expertise</a>
+      <a href="index.html#resources" data-es="Recursos">Resources</a>
+      <a href="index.html#faq" data-es="Preguntas frecuentes">FAQ</a>
+      <a href="index.html#about" data-es="Acerca de">About</a>
+      <button type="button" id="langToggle" class="btn btn-ghost" aria-label="Ver este sitio en español" style="padding:.5rem .85rem;font-size:.85rem;min-height:40px;cursor:pointer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
+        <span id="langLabel">Español</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary" data-es="Discutir colaboración">Discuss Engagement</a>
     </nav>
   </div>
 </header>
@@ -197,11 +201,11 @@ footer a:hover{color:var(--primary)}
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container">
-    <h1>Specialized Care Built for Athletes</h1>
-    <p>Fast concussion evaluation, expert return-to-play decisions, and migraine protocols designed to get you back in the game safely. Board-certified sports neurologist focused on keeping you performing at your best.</p>
+    <h1 data-es="Atención especializada para atletas">Specialized Care Built for Athletes</h1>
+    <p data-es="Evaluación rápida de conmociones cerebrales, decisiones expertas de regreso al juego y protocolos de migraña diseñados para que vuelvas al juego de forma segura. Neurólogo deportivo certificado por la junta, enfocado en mantener tu mejor rendimiento.">Fast concussion evaluation, expert return-to-play decisions, and migraine protocols designed to get you back in the game safely. Board-certified sports neurologist focused on keeping you performing at your best.</p>
     <div class="hero-cta">
-      <a href="https://www.neurahealth.co" target="_blank" rel="noopener" class="btn btn-primary">Schedule Evaluation</a>
-      <a href="#faq" class="btn btn-ghost">Athlete FAQs</a>
+      <a href="https://www.neurahealth.co" target="_blank" rel="noopener" class="btn btn-primary" data-es="Agendar evaluación">Schedule Evaluation</a>
+      <a href="#faq" class="btn btn-ghost" data-es="Preguntas de atletas">Athlete FAQs</a>
     </div>
   </div>
 </section>
@@ -210,27 +214,27 @@ footer a:hover{color:var(--primary)}
 <section>
   <div class="container">
     <div class="sec-title">
-      <h2>Concussion Evaluation & Return-to-Play</h2>
-      <p>Evidence-based protocols designed for fast, safe decisions so you get back in the game without compromising recovery.</p>
+      <h2 data-es="Evaluación de conmoción cerebral y regreso al juego">Concussion Evaluation & Return-to-Play</h2>
+      <p data-es="Protocolos basados en evidencia, diseñados para decisiones rápidas y seguras que te devuelven al juego sin comprometer la recuperación.">Evidence-based protocols designed for fast, safe decisions so you get back in the game without compromising recovery.</p>
     </div>
     <div class="cards">
       <div class="card">
         <div class="card-icon">⚡</div>
-        <h3>Expert Concussion Assessment</h3>
-        <p>Comprehensive evaluation to understand your injury and build a personalized recovery plan grounded in sports neurology expertise.</p>
-        <a href="articles/return-to-play-protocol.html">Learn about RTP →</a>
+        <h3 data-es="Evaluación experta de conmoción cerebral">Expert Concussion Assessment</h3>
+        <p data-es="Evaluación integral para comprender tu lesión y crear un plan de recuperación personalizado, fundamentado en la neurología deportiva.">Comprehensive evaluation to understand your injury and build a personalized recovery plan grounded in sports neurology expertise.</p>
+        <a href="articles/return-to-play-protocol.html" data-es="Conoce el protocolo RTP →">Learn about RTP →</a>
       </div>
       <div class="card">
         <div class="card-icon">📋</div>
-        <h3>Personalized RTP Plan</h3>
-        <p>Six-stage graduated protocol tailored to your sport, position, and recovery timeline—not a one-size-fits-all approach.</p>
-        <a href="articles/concussion-recovery-timeline.html">Recovery timeline →</a>
+        <h3 data-es="Plan RTP personalizado">Personalized RTP Plan</h3>
+        <p data-es="Protocolo gradual de seis etapas adaptado a tu deporte, posición y cronología de recuperación — no un enfoque único para todos.">Six-stage graduated protocol tailored to your sport, position, and recovery timeline—not a one-size-fits-all approach.</p>
+        <a href="articles/concussion-recovery-timeline.html" data-es="Cronología de recuperación →">Recovery timeline →</a>
       </div>
       <div class="card">
         <div class="card-icon">✓</div>
-        <h3>Medical Clearance</h3>
-        <p>Official return-to-play clearance backed by neurology expertise—coaches and athletic directors trust the decision.</p>
-        <a href="index.html#faq">RTP FAQs →</a>
+        <h3 data-es="Autorización médica">Medical Clearance</h3>
+        <p data-es="Autorización oficial de regreso al juego respaldada por experiencia en neurología — entrenadores y directores deportivos confían en la decisión.">Official return-to-play clearance backed by neurology expertise—coaches and athletic directors trust the decision.</p>
+        <a href="index.html#faq" data-es="Preguntas sobre RTP →">RTP FAQs →</a>
       </div>
     </div>
   </div>
@@ -240,24 +244,24 @@ footer a:hover{color:var(--primary)}
 <section style="background:var(--bg-2);border-block:1px solid var(--border)">
   <div class="container">
     <div class="sec-title">
-      <h2>Migraine Management for Athletes</h2>
-      <p>Custom treatment plans that keep you active and performing—without the medications that sideline you.</p>
+      <h2 data-es="Manejo de migraña para atletas">Migraine Management for Athletes</h2>
+      <p data-es="Planes de tratamiento personalizados que te mantienen activo y rindiendo — sin medicamentos que te dejen fuera del juego.">Custom treatment plans that keep you active and performing—without the medications that sideline you.</p>
     </div>
     <div class="cards">
       <div class="card">
         <div class="card-icon">🧠</div>
-        <h3>Performance-First Approach</h3>
-        <p>Medications and protocols optimized for athletic performance—no drowsy treatments that compromise training.</p>
+        <h3 data-es="Enfoque centrado en el rendimiento">Performance-First Approach</h3>
+        <p data-es="Medicamentos y protocolos optimizados para el rendimiento atlético — sin tratamientos sedantes que comprometan el entrenamiento.">Medications and protocols optimized for athletic performance—no drowsy treatments that compromise training.</p>
       </div>
       <div class="card">
         <div class="card-icon">🔍</div>
-        <h3>Trigger Identification</h3>
-        <p>Discover what causes your migraines and how to manage them before they impact competition.</p>
+        <h3 data-es="Identificación de desencadenantes">Trigger Identification</h3>
+        <p data-es="Descubre qué causa tus migrañas y cómo manejarlas antes de que afecten la competencia.">Discover what causes your migraines and how to manage them before they impact competition.</p>
       </div>
       <div class="card">
         <div class="card-icon">💪</div>
-        <h3>Prevention & Optimization</h3>
-        <p>Strategies to prevent migraines and optimize neurological performance in training and competition.</p>
+        <h3 data-es="Prevención y optimización">Prevention & Optimization</h3>
+        <p data-es="Estrategias para prevenir migrañas y optimizar el rendimiento neurológico en el entrenamiento y la competencia.">Strategies to prevent migraines and optimize neurological performance in training and competition.</p>
       </div>
     </div>
   </div>
@@ -267,39 +271,39 @@ footer a:hover{color:var(--primary)}
 <section>
   <div class="container">
     <div class="sec-title">
-      <h2>Athlete Resources & Education</h2>
-      <p>Research-backed guides, protocols, and articles written specifically for athletes.</p>
+      <h2 data-es="Recursos y educación para atletas">Athlete Resources & Education</h2>
+      <p data-es="Guías, protocolos y artículos respaldados por la investigación, escritos específicamente para atletas.">Research-backed guides, protocols, and articles written specifically for athletes.</p>
     </div>
     <div class="cards">
       <div class="card">
-        <h3>Return-to-Play Protocol</h3>
-        <p>The six-stage framework used by pro and college programs to get you back safely.</p>
-        <a href="articles/return-to-play-protocol.html">Read article →</a>
+        <h3 data-es="Protocolo de regreso al juego">Return-to-Play Protocol</h3>
+        <p data-es="El marco de seis etapas utilizado por programas profesionales y universitarios para tu regreso seguro.">The six-stage framework used by pro and college programs to get you back safely.</p>
+        <a href="articles/return-to-play-protocol.html" data-es="Leer artículo →">Read article →</a>
       </div>
       <div class="card">
-        <h3>Concussion Recovery Timeline</h3>
-        <p>What to expect week-by-week, from initial injury to full return to sport.</p>
-        <a href="articles/concussion-recovery-timeline.html">Read article →</a>
+        <h3 data-es="Cronología de recuperación">Concussion Recovery Timeline</h3>
+        <p data-es="Qué esperar semana a semana, desde la lesión inicial hasta el regreso completo al deporte.">What to expect week-by-week, from initial injury to full return to sport.</p>
+        <a href="articles/concussion-recovery-timeline.html" data-es="Leer artículo →">Read article →</a>
       </div>
       <div class="card">
-        <h3>Sideline Concussion Recognition</h3>
-        <p>How coaches, teammates, and parents can spot a concussion on the field.</p>
-        <a href="articles/sideline-concussion-recognition.html">Read article →</a>
+        <h3 data-es="Reconocimiento de conmociones al borde del campo">Sideline Concussion Recognition</h3>
+        <p data-es="Cómo entrenadores, compañeros y padres pueden detectar una conmoción en el campo.">How coaches, teammates, and parents can spot a concussion on the field.</p>
+        <a href="articles/sideline-concussion-recognition.html" data-es="Leer artículo →">Read article →</a>
       </div>
       <div class="card">
-        <h3>Return-to-Learn Protocols</h3>
-        <p>Managing school and studying during concussion recovery.</p>
-        <a href="articles/return-to-learn.html">Read article →</a>
+        <h3 data-es="Protocolos de regreso al aprendizaje">Return-to-Learn Protocols</h3>
+        <p data-es="Manejo de la escuela y el estudio durante la recuperación.">Managing school and studying during concussion recovery.</p>
+        <a href="articles/return-to-learn.html" data-es="Leer artículo →">Read article →</a>
       </div>
       <div class="card">
-        <h3>Second-Impact Syndrome</h3>
-        <p>Why a second concussion during incomplete recovery is dangerous.</p>
-        <a href="articles/second-impact-syndrome.html">Read article →</a>
+        <h3 data-es="Síndrome del segundo impacto">Second-Impact Syndrome</h3>
+        <p data-es="Por qué una segunda conmoción durante una recuperación incompleta es peligrosa.">Why a second concussion during incomplete recovery is dangerous.</p>
+        <a href="articles/second-impact-syndrome.html" data-es="Leer artículo →">Read article →</a>
       </div>
       <div class="card">
-        <h3>CTE vs Post-Concussion Syndrome</h3>
-        <p>Understanding the difference and long-term brain health.</p>
-        <a href="articles/cte-vs-post-concussion-syndrome.html">Read article →</a>
+        <h3 data-es="CTE vs. síndrome posconmoción">CTE vs Post-Concussion Syndrome</h3>
+        <p data-es="Comprender la diferencia y la salud cerebral a largo plazo.">Understanding the difference and long-term brain health.</p>
+        <a href="articles/cte-vs-post-concussion-syndrome.html" data-es="Leer artículo →">Read article →</a>
       </div>
     </div>
   </div>
@@ -309,85 +313,85 @@ footer a:hover{color:var(--primary)}
 <section id="faq" style="background:var(--bg-2);border-block:1px solid var(--border)">
   <div class="container">
     <div class="sec-title">
-      <h2>Athlete FAQs</h2>
-      <p>Quick answers to questions athletes ask after injury.</p>
+      <h2 data-es="Preguntas frecuentes de atletas">Athlete FAQs</h2>
+      <p data-es="Respuestas rápidas a las preguntas que los atletas hacen después de una lesión.">Quick answers to questions athletes ask after injury.</p>
     </div>
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>Can I play the same day as my concussion?</span>
+        <span data-es="¿Puedo jugar el mismo día de mi conmoción cerebral?">Can I play the same day as my concussion?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="No. El consenso internacional actual es claro: cualquier atleta con sospecha de conmoción debe ser retirado del juego inmediatamente y no regresar el mismo día. El regreso seguro requiere un protocolo gradual supervisado médicamente que toma un mínimo de 6 días.">
         No. Current international consensus is clear: any athlete with a suspected concussion must be removed from play immediately and not return the same day. Safe return requires a graduated, medically supervised protocol that takes a minimum of 6 days.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>How long until I'm back to full play?</span>
+        <span data-es="¿Cuánto falta para volver al juego completo?">How long until I'm back to full play?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="La mayoría de las conmociones se resuelven en 7-14 días con el manejo adecuado. Algunos atletas se recuperan en pocos días; otros con síntomas persistentes tardan varias semanas. El tiempo de recuperación depende de la gravedad de la lesión, tu edad, conmociones previas y qué tan bien sigas el protocolo. Los atletas más jóvenes suelen recuperarse más lentamente.">
         Most concussions resolve in 7–14 days with proper management. Some athletes recover in a few days; others with persistent symptoms take several weeks. Recovery time depends on the severity of the injury, your age, prior concussions, and how well you follow the protocol. Younger athletes typically recover more slowly.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>Can I train while recovering?</span>
+        <span data-es="¿Puedo entrenar durante la recuperación?">Can I train while recovering?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="Sí, pero gradualmente y bajo supervisión. El protocolo de regreso al juego comienza con actividad limitada por síntomas y progresa por etapas: ejercicio aeróbico ligero, ejercicios específicos del deporte, práctica sin contacto y finalmente contacto completo. Cada etapa requiere al menos 24 horas sin recurrencia de síntomas.">
         Yes, but gradually and under supervision. The return-to-play protocol starts with symptom-limited activity and progresses through stages: light aerobic exercise, sport-specific drills, non-contact practice, and finally full contact. Each stage requires at least 24 hours without symptom recurrence.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>Do I need an MRI or CT scan?</span>
+        <span data-es="¿Necesito una resonancia magnética o una tomografía?">Do I need an MRI or CT scan?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="La mayoría de las conmociones no requieren imágenes. Las tomografías y resonancias se solicitan cuando hay síntomas de alerta como pérdida de conciencia, vómitos repetidos, dolor de cabeza que empeora o convulsiones. Con síntomas típicos de conmoción, la evaluación clínica suele ser suficiente.">
         Most concussions don't require imaging. CT and MRI scans are ordered when there are red-flag symptoms like loss of consciousness, repeated vomiting, worsening headache, or seizure. If you have typical concussion symptoms, clinical evaluation is usually sufficient.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>What if I get a second concussion before full recovery?</span>
+        <span data-es="¿Qué pasa si sufro una segunda conmoción antes de recuperarme por completo?">What if I get a second concussion before full recovery?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="Una segunda conmoción durante una recuperación incompleta conlleva un riesgo significativo de síntomas prolongados y complicaciones potencialmente graves. Por eso el manejo conservador y la autorización médica antes del regreso al juego son críticos. Nunca apresures la cronología.">
         A second concussion during incomplete recovery from the first carries significant risk of prolonged symptoms and potentially serious complications. This is why conservative management and medical clearance before return-to-play are critical. Never rush the timeline.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>Will I have long-term problems from a concussion?</span>
+        <span data-es="¿Tendré problemas a largo plazo por una conmoción cerebral?">Will I have long-term problems from a concussion?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="La mayoría de los atletas se recuperan completamente de una sola conmoción sin efectos duraderos. Sin embargo, conmociones repetitivas, especialmente mal manejadas o con regreso prematuro al juego, pueden contribuir a síntomas prolongados, trastornos del estado de ánimo y mayor riesgo de enfermedad neurodegenerativa. El manejo adecuado importa.">
         Most athletes recover fully from a single concussion with no lasting effects. However, repetitive concussions, especially poorly managed or returned-to-play too quickly, can contribute to prolonged symptoms, mood disorders, and increased risk of neurodegenerative disease. Proper management matters.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>Why should I see a specialist?</span>
+        <span data-es="¿Por qué debería ver a un especialista?">Why should I see a specialist?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="La mayoría de las conmociones pueden ser manejadas por atención primaria, pero un neurólogo deportivo aporta experiencia especializada en la recuperación específica del atleta, decisiones de regreso al juego de alto riesgo y casos complejos. Para atletas competitivos donde el tiempo y la autorización importan, esa experiencia es valiosa.">
         Most concussions can be managed by primary care, but a sports neurologist brings specialized expertise in athlete-specific recovery, high-stakes return-to-play decisions, and complex cases. For competitive athletes where timing and clearance matter, that expertise is valuable.
       </div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-summary">
-        <span>How do I know when I'm fully recovered?</span>
+        <span data-es="¿Cómo sé cuándo estoy completamente recuperado?">How do I know when I'm fully recovered?</span>
         <span class="faq-icon">▼</span>
       </summary>
-      <div class="faq-body">
+      <div class="faq-body" data-es="Recuperación completa significa: sin síntomas en reposo, sin síntomas durante actividad progresivamente intensa, función cognitiva normal y autorización médica de un clínico calificado. No juzgues la recuperación por cómo te sientes — usa el protocolo estructurado de regreso al juego.">
         Full recovery means: no symptoms at rest, no symptoms during progressively intense activity, normal cognitive function, and medical clearance from a qualified clinician. Don't judge recovery by how you feel—use the structured return-to-play protocol.
       </div>
     </details>
@@ -397,13 +401,13 @@ footer a:hover{color:var(--primary)}
 <!-- ===== CTA ===== -->
 <section>
   <div class="container text-center">
-    <h2>Ready to Get Started?</h2>
-    <p style="font-size:1.1rem;color:var(--fg-muted);max-width:600px;margin:1.5rem auto">
+    <h2 data-es="¿Listo para comenzar?">Ready to Get Started?</h2>
+    <p style="font-size:1.1rem;color:var(--fg-muted);max-width:600px;margin:1.5rem auto" data-es="Para evaluaciones individuales de atletas mediante una visita clínica, reserva a través de Neura Health. Para apoyo y consultoría a equipos, discute una colaboración como neurólogo de equipo.">
       For individual athlete evaluations through a clinical visit, book through Neura Health. For team-based support and consulting, discuss a team neurologist engagement.
     </p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-      <a href="https://www.neurahealth.co" target="_blank" rel="noopener" class="btn btn-primary">Book Individual Evaluation</a>
-      <a href="teams.html" class="btn btn-ghost">Explore Team Services</a>
+      <a href="https://www.neurahealth.co" target="_blank" rel="noopener" class="btn btn-primary" data-es="Reservar evaluación individual">Book Individual Evaluation</a>
+      <a href="teams.html" class="btn btn-ghost" data-es="Explorar servicios para equipos">Explore Team Services</a>
     </div>
   </div>
 </section>
@@ -438,6 +442,31 @@ footer a:hover{color:var(--primary)}
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 <script>
 (function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('primaryNav');if(!t||!n)return;function close(){n.classList.remove('open');t.setAttribute('aria-expanded','false')}t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});n.addEventListener('click',function(e){if(e.target.closest('a'))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();t.focus()}});window.addEventListener('resize',function(){if(window.innerWidth>1080)close()});})();
+</script>
+<script>
+/* ===== Inline EN/ES language toggle ===== */
+(function(){
+  var originals = new WeakMap();
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('preferredLang', lang); } catch(e){}
+    document.querySelectorAll('[data-es]').forEach(function(el){
+      if(!originals.has(el)) originals.set(el, el.innerHTML);
+      el.innerHTML = (lang === 'es') ? el.dataset.es : originals.get(el);
+    });
+    var label = document.getElementById('langLabel');
+    if(label) label.textContent = (lang === 'es') ? 'English' : 'Español';
+  }
+  function init(){
+    var btn = document.getElementById('langToggle');
+    if(!btn) return;
+    btn.addEventListener('click', function(){ setLang(document.documentElement.lang === 'es' ? 'en' : 'es'); });
+    var saved = null;
+    try { saved = localStorage.getItem('preferredLang'); } catch(e){}
+    if(saved === 'es') setLang('es');
+  }
+  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); } else { init(); }
+})();
 </script>
 </body>
 </html>
