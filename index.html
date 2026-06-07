@@ -152,6 +152,8 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
 .brand-mark{width:34px;height:34px;display:grid;place-items:center;color:var(--primary);flex-shrink:0}
     .brand-mark svg{width:34px;height:34px;display:block}
 .nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{white-space:nowrap}
+.brand{white-space:nowrap}
 .nav-links a:not(.btn){color:var(--fg-muted);font-weight:500;font-size:.95rem}
 .nav-links a:hover{color:var(--accent);text-decoration:none}
 .brand:hover{color:var(--accent);text-decoration:none}
@@ -466,13 +468,13 @@ footer a:hover{color:var(--primary)}
       <a href="teams.html" data-es="Equipos">For Teams</a>
       <a href="#expertise" data-es="Experiencia">Expertise</a>
       <a href="#resources" data-es="Recursos">Resources</a>
-      <a href="#faq" data-es="Preguntas frecuentes">FAQ</a>
-      <a href="#about" data-es="Acerca de">About</a>
+      <a href="#faq" data-es="FAQ">FAQ</a>
+      <a href="#about" data-es="Sobre mí">About</a>
       <button type="button" id="langToggle" class="btn btn-ghost" aria-label="Ver este sitio en español" style="padding:.5rem .85rem;font-size:.85rem;min-height:40px;cursor:pointer">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
         <span id="langLabel">Español</span>
       </button>
-      <a href="#contact" class="btn btn-primary" data-es="Discutir colaboración">Discuss Engagement</a>
+      <a href="#contact" class="btn btn-primary" data-es="Colaboremos">Discuss Engagement</a>
     </nav>
   </div>
 </header>
@@ -530,9 +532,9 @@ footer a:hover{color:var(--primary)}
         </a>
       </div>
       <div class="hero-stats" role="list">
-        <div class="stat" role="listitem"><strong data-count="2" data-suffix="x">0x</strong><span data-es="Certificado por la junta">Board Certified</span></div>
-        <div class="stat" role="listitem"><strong data-count="2" data-suffix="x">0x</strong><span data-es="Formado en subespecialidad">Fellowship Trained</span></div>
-        <div class="stat" role="listitem"><strong data-count="1000" data-suffix="+">0+</strong><span data-es="Atletas atendidos">Athletes Managed</span></div>
+        <div class="stat" role="listitem"><strong data-count="2" data-suffix="x">2x</strong><span data-es="Certificado por la junta">Board Certified</span></div>
+        <div class="stat" role="listitem"><strong data-count="2" data-suffix="x">2x</strong><span data-es="Formado en subespecialidad">Fellowship Trained</span></div>
+        <div class="stat" role="listitem"><strong data-count="1000" data-suffix="+">1,000+</strong><span data-es="Atletas atendidos">Athletes Managed</span></div>
       </div>
     </div>
 
@@ -586,6 +588,7 @@ footer a:hover{color:var(--primary)}
           <li data-es="Protocolos personalizados de regreso al juego">Personalized return-to-play protocols</li>
           <li data-es="Asesoramiento y vigilancia del riesgo de CTE">CTE risk counseling &amp; surveillance</li>
         </ul>
+        <p style="margin-top:auto;padding-top:.75rem"><a href="concussion.html" data-es="Atención de conmociones →">Concussion care →</a> · <a href="post-concussion-syndrome.html" data-es="Síndrome posconmoción →">Post-concussion syndrome →</a></p>
       </article>
 
       <article class="reveal card b-wide" aria-labelledby="c-sports">
@@ -610,6 +613,7 @@ footer a:hover{color:var(--primary)}
         </div>
         <h3 id="c-headache" data-es="Cefalea y migraña">Headache &amp; Migraine</h3>
         <p data-es="Tratamiento dirigido para cefalea postraumática, migraña y dolor cervicogénico en atletas.">Targeted treatment for post-traumatic headache, migraine, and cervicogenic pain in athletes.</p>
+        <p><a href="headache-migraine-athletes.html" data-es="Cefalea y migraña en atletas →">Headache care for athletes →</a></p>
       </article>
 
       <article class="reveal card b-third" aria-labelledby="c-brain">
@@ -618,6 +622,7 @@ footer a:hover{color:var(--primary)}
         </div>
         <h3 id="c-brain" data-es="Optimización de la salud cerebral">Brain Health Optimization</h3>
         <p data-es="Programas de rendimiento cognitivo, sueño y bienestar neurológico para atletas y ejecutivos.">Cognitive performance, sleep, and neuro-wellness programs for athletes and executives.</p>
+        <p><a href="neurological-performance.html" data-es="Rendimiento neurológico →">Neurological performance →</a></p>
       </article>
 
       <article class="reveal card b-third" aria-labelledby="c-team">
@@ -626,6 +631,7 @@ footer a:hover{color:var(--primary)}
         </div>
         <h3 id="c-team" data-es="Consultoría para equipos y organizaciones">Team &amp; Organizational Consulting</h3>
         <p data-es="Experiencia neurológica a demanda para equipos, ligas e instalaciones de entrenamiento.">On-demand neurology expertise for teams, leagues, and training facilities.</p>
+        <p><a href="team-neurology-consulting.html" data-es="Consultoría de neurología para equipos →">Team neurology consulting →</a></p>
       </article>
     </div></div>
   </div>

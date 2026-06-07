@@ -92,6 +92,8 @@ p{margin-bottom:1rem}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:.6rem;font-family:'Figtree',sans-serif;font-weight:700;color:#fff;letter-spacing:-.01em}
 .nav-links{display:flex;gap:1.5rem;align-items:center}
+.nav-links a{white-space:nowrap}
+.brand{white-space:nowrap}
 .nav-links a:not(.btn){color:var(--fg-muted);font-weight:500;font-size:.95rem}
 .nav-links a:hover{color:var(--accent);text-decoration:none}
 .brand:hover{color:var(--accent);text-decoration:none}
@@ -134,7 +136,7 @@ section{padding:clamp(3rem,6vw,4rem) 0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
 .card{background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:transform .25s var(--ease),border-color .25s var(--ease)}
 .card:hover{transform:translateY(-4px);border-color:var(--border-strong)}
-.card-icon{width:48px;height:48px;background:rgba(34,211,238,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
+.card-icon{width:48px;height:48px;background:rgba(34,211,238,.15);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;color:var(--primary)}
 .card h3{color:#fff;margin-bottom:.75rem}
 .card p{font-size:.95rem;color:var(--fg-muted);margin-bottom:1rem}
 .card a{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;color:var(--primary)}
@@ -185,13 +187,13 @@ footer a:hover{color:var(--primary)}
       <a href="teams.html" data-es="Equipos">For Teams</a>
       <a href="index.html#expertise" data-es="Experiencia">Expertise</a>
       <a href="index.html#resources" data-es="Recursos">Resources</a>
-      <a href="index.html#faq" data-es="Preguntas frecuentes">FAQ</a>
-      <a href="index.html#about" data-es="Acerca de">About</a>
+      <a href="index.html#faq" data-es="FAQ">FAQ</a>
+      <a href="index.html#about" data-es="Sobre mí">About</a>
       <button type="button" id="langToggle" class="btn btn-ghost" aria-label="Ver este sitio en español" style="padding:.5rem .85rem;font-size:.85rem;min-height:40px;cursor:pointer">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg>
         <span id="langLabel">Español</span>
       </button>
-      <a href="index.html#contact" class="btn btn-primary" data-es="Discutir colaboración">Discuss Engagement</a>
+      <a href="index.html#contact" class="btn btn-primary" data-es="Colaboremos">Discuss Engagement</a>
     </nav>
   </div>
 </header>
@@ -219,19 +221,19 @@ footer a:hover{color:var(--primary)}
     </div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon">⚡</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <h3 data-es="Evaluación experta de conmoción cerebral">Expert Concussion Assessment</h3>
         <p data-es="Evaluación integral para comprender tu lesión y crear un plan de recuperación personalizado, fundamentado en la neurología deportiva.">Comprehensive evaluation to understand your injury and build a personalized recovery plan grounded in sports neurology expertise.</p>
         <a href="articles/return-to-play-protocol.html" data-es="Conoce el protocolo RTP →">Learn about RTP →</a>
       </div>
       <div class="card">
-        <div class="card-icon">📋</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h6"/></svg></div>
         <h3 data-es="Plan RTP personalizado">Personalized RTP Plan</h3>
         <p data-es="Protocolo gradual de seis etapas adaptado a tu deporte, posición y cronología de recuperación — no un enfoque único para todos.">Six-stage graduated protocol tailored to your sport, position, and recovery timeline—not a one-size-fits-all approach.</p>
         <a href="articles/concussion-recovery-timeline.html" data-es="Cronología de recuperación →">Recovery timeline →</a>
       </div>
       <div class="card">
-        <div class="card-icon">✓</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div>
         <h3 data-es="Autorización médica">Medical Clearance</h3>
         <p data-es="Autorización oficial de regreso al juego respaldada por experiencia en neurología — entrenadores y directores deportivos confían en la decisión.">Official return-to-play clearance backed by neurology expertise—coaches and athletic directors trust the decision.</p>
         <a href="index.html#faq" data-es="Preguntas sobre RTP →">RTP FAQs →</a>
@@ -249,17 +251,17 @@ footer a:hover{color:var(--primary)}
     </div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon">🧠</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a4.5 4.5 0 0 0-4 6.5A4.5 4.5 0 0 0 7 17a4.5 4.5 0 0 0 5 4 4.5 4.5 0 0 0 5-4 4.5 4.5 0 0 0 1.5-8.5A4.5 4.5 0 0 0 14.5 2a4.5 4.5 0 0 0-5 0z"/></svg></div>
         <h3 data-es="Enfoque centrado en el rendimiento">Performance-First Approach</h3>
         <p data-es="Medicamentos y protocolos optimizados para el rendimiento atlético — sin tratamientos sedantes que comprometan el entrenamiento.">Medications and protocols optimized for athletic performance—no drowsy treatments that compromise training.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🔍</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
         <h3 data-es="Identificación de desencadenantes">Trigger Identification</h3>
         <p data-es="Descubre qué causa tus migrañas y cómo manejarlas antes de que afecten la competencia.">Discover what causes your migraines and how to manage them before they impact competition.</p>
       </div>
       <div class="card">
-        <div class="card-icon">💪</div>
+        <div class="card-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div>
         <h3 data-es="Prevención y optimización">Prevention & Optimization</h3>
         <p data-es="Estrategias para prevenir migrañas y optimizar el rendimiento neurológico en el entrenamiento y la competencia.">Strategies to prevent migraines and optimize neurological performance in training and competition.</p>
       </div>

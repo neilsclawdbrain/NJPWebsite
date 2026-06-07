@@ -1,5 +1,5 @@
 ---
-title: Dr. Neil J. Patel, MD, MBA | Sports Neurologist — Available for Team Advisory, Clinical Roles & Consulting
+title: Sports Neurologist for Concussions & Athletes | Dr. Neil Patel, MD — Board-Certified | Team Consulting
 canonical: https://www.drneilpatelmd.com/
 ---
 
@@ -18,11 +18,11 @@ Board-certified neurologist and fellowship-trained sports neurologist combining 
 
 [Connect on LinkedIn](https://www.linkedin.com/in/drneilpatel)
 
-**0x**Board Certified
+**2x**Board Certified
 
-**0x**Fellowship Trained
+**2x**Fellowship Trained
 
-**0+**Athletes Managed
+**1,000+**Athletes Managed
 
 DUAL BOARDED · DUAL FELLOWSHIP
 **Neurology · Brain Injury · Sports Neuro · Informatics**
@@ -48,6 +48,8 @@ Comprehensive diagnosis, recovery planning, and return-to-play protocols for ath
 * Personalized return-to-play protocols
 * CTE risk counseling & surveillance
 
+[Concussion care →](concussion.html) · [Post-concussion syndrome →](post-concussion-syndrome.html)
+
 ### Sports Neurology
 
 Fellowship-trained care for nervous-system conditions affecting athletic performance — headache, nerve injury, movement disorders, and neuromuscular issues.
@@ -60,13 +62,19 @@ Helping health systems and sports organizations design EHR workflows, neuro-regi
 
 Targeted treatment for post-traumatic headache, migraine, and cervicogenic pain in athletes.
 
+[Headache care for athletes →](headache-migraine-athletes.html)
+
 ### Brain Health Optimization
 
 Cognitive performance, sleep, and neuro-wellness programs for athletes and executives.
 
+[Neurological performance →](neurological-performance.html)
+
 ### Team & Organizational Consulting
 
 On-demand neurology expertise for teams, leagues, and training facilities.
+
+[Team neurology consulting →](team-neurology-consulting.html)
 
 Services
 
@@ -76,11 +84,11 @@ Flexible engagements designed for individuals, teams, and institutions — remot
 
 ### Individual Athlete Consultation
 
-Second-opinion reviews, diagnostic clarification, and personalized recovery roadmaps for concussion and complex neurologic cases.
+Clinical evaluations through Neura Health: second-opinion reviews, diagnostic clarification, and personalized recovery roadmaps for concussion and complex neurologic cases.
 
 ### Team & Medical Staff Advisory
 
-Protocol development, medical staff education, and retained advisory roles for organizations that need deep neurology expertise on call.
+Team neurologist retainer: protocol development, sideline evaluations, medical staff education, and retained advisory roles available to organizations needing immediate neurology expertise.
 
 ### Clinical Informatics Engagements
 
