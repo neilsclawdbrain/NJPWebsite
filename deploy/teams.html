@@ -102,13 +102,27 @@ section{padding-block:clamp(4rem,8vw,6.5rem)}
 .brand-mark svg{width:34px;height:34px;display:block}
 .nav-links{display:flex;gap:1.5rem;align-items:center}
 .nav-links a:not(.btn){color:var(--fg-muted);font-weight:500;font-size:.95rem}
-.nav-links a:hover{color:var(--fg);text-decoration:none}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
+.brand:hover{color:var(--accent);text-decoration:none}
+.brand-suffix{color:var(--fg-subtle)}
+.brand:hover .brand-suffix{color:var(--accent)}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.15rem;border-radius:999px;font-family:'Figtree',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:-.005em;min-height:44px;border:1px solid transparent;cursor:pointer;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;transition:transform .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease)}
 .btn-primary{background:var(--primary);color:#000;font-weight:800;letter-spacing:.005em}
 .btn-primary:hover{background:#67e8f9;text-decoration:none;transform:translateY(-1px)}
 .btn-ghost{background:transparent;color:var(--fg);border-color:var(--border-strong)}
 .btn-ghost:hover{background:var(--surface);text-decoration:none}
-@media (max-width:780px){.nav-links{display:none}}
+.nav-toggle{display:none;background:transparent;border:1px solid var(--border-strong);border-radius:10px;width:44px;height:44px;align-items:center;justify-content:center;cursor:pointer;color:var(--fg);padding:0}
+.nav-toggle svg{width:22px;height:22px}
+.nav-toggle .icon-close{display:none}
+.nav-toggle[aria-expanded="true"] .icon-menu{display:none}
+.nav-toggle[aria-expanded="true"] .icon-close{display:block}
+@media (max-width:780px){
+  .nav-toggle{display:inline-flex}
+  .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:.4rem;padding:1rem 1.25rem 1.25rem;background:rgba(11,18,32,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
+  .nav-links.open{display:flex}
+  .nav-links a:not(.btn){display:block;padding:.6rem .25rem;font-size:1.05rem}
+  .nav-links .btn{justify-content:center}
+}
 
 /* ===== Hero ===== */
 .hero{position:relative;padding-top:clamp(4rem,8vw,7rem);padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden;isolation:isolate;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(52,211,153,.05));border-bottom:1px solid var(--border)}
@@ -173,10 +187,12 @@ footer a:hover{color:var(--primary)}
   <div class="container nav">
     <a href="/" class="brand" aria-label="Dr. Neil J. Patel MD — Home">
       <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16 C 5 10, 10 5, 17 5 C 24 5, 29 9, 29 15 C 29 19, 26 22, 23 22 C 25 23, 26 25, 25 27 C 24 28, 21 28, 20 27 C 19 26, 19 24, 20 23 C 17 24, 12 24, 8 22 C 6 20, 5 18, 5 16 Z"/><line x1="17" y1="24" x2="16" y2="29"/><path d="M9 16 C 13 18, 17 17, 21 18" opacity=".5"/><path d="M16 5 C 15 9, 17 13, 16 16" opacity=".4"/><circle cx="22" cy="25" r="1" fill="var(--accent)" stroke="none"/></svg></span>
-      <span>Dr. Neil J. Patel<span style="color:var(--fg-subtle);font-weight:500"> · MD, MBA</span></span>
+      <span>Dr. Neil J. Patel<span class="brand-suffix"> · MD, MBA</span></span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu"><svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+    <nav class="nav-links" id="primaryNav" aria-label="Primary">
       <a href="athletes.html">For Athletes</a>
+      <a href="teams.html">For Teams</a>
       <a href="index.html#expertise">Expertise</a>
       <a href="index.html#resources">Resources</a>
       <a href="index.html#about">About</a>
@@ -406,5 +422,8 @@ footer a:hover{color:var(--primary)}
 </footer>
 
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>
+(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('primaryNav');if(!t||!n)return;function close(){n.classList.remove('open');t.setAttribute('aria-expanded','false')}t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});n.addEventListener('click',function(e){if(e.target.closest('a'))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();t.focus()}});window.addEventListener('resize',function(){if(window.innerWidth>780)close()});})();
+</script>
 </body>
 </html>
