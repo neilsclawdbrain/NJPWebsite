@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>The Sports Neurology Stack — Private Archive</title>
+<style>
+  :root { color-scheme: dark; --bg:#0a0a0a; --panel:#121212; --panel2:#161616; --border:#262626; --text:#e8e8e8; --muted:#a8a8a8; --accent:#2dd4a4; --accent-dim:#15493a; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; }
+  a { color: var(--accent); }
+  .shell { max-width: 760px; margin: 0 auto; padding: 32px 18px 80px; }
+  .brand { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  h1 { font-size: 24px; margin: 8px 0 4px; color:#fff; letter-spacing:-0.01em; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
+
+  /* Gate */
+  .gate { max-width: 380px; margin: 8vh auto 0; background: var(--panel); border:1px solid var(--border); border-radius: 12px; padding: 28px 24px; }
+  .gate h2 { font-size: 18px; color:#fff; margin: 6px 0 6px; }
+  .gate p { color: var(--muted); font-size: 13px; margin: 0 0 18px; line-height:1.5; }
+  .gate input { width: 100%; padding: 12px 14px; font-size: 15px; border-radius: 8px; border:1px solid var(--border);
+    background:#0d0d0d; color:#fff; outline:none; }
+  .gate input:focus { border-color: var(--accent); }
+  .btn { display:inline-block; width:100%; margin-top:12px; padding:12px 14px; font-size:15px; font-weight:600; cursor:pointer;
+    border:none; border-radius:8px; background:var(--accent); color:#06251c; }
+  .btn:disabled { opacity:.6; cursor:default; }
+  .err { color:#f87171; font-size:13px; margin-top:10px; min-height:16px; }
+
+  /* Calendar */
+  .topbar { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+  .monthnav { display:flex; align-items:center; gap:10px; }
+  .navbtn { background:var(--panel); border:1px solid var(--border); color:#fff; border-radius:8px; padding:7px 12px; cursor:pointer; font-size:15px; }
+  .navbtn:hover { border-color:var(--accent); }
+  .monthlabel { font-size:16px; font-weight:600; color:#fff; min-width:150px; text-align:center; }
+  .lock { background:transparent; border:1px solid var(--border); color:var(--muted); border-radius:8px; padding:7px 12px; cursor:pointer; font-size:12px; }
+
+  .cal { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; }
+  .dow { text-align:center; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding:6px 0; }
+  .cell { aspect-ratio:1/1; border:1px solid var(--border); border-radius:10px; background:var(--panel2);
+    display:flex; flex-direction:column; padding:7px 8px; min-height:62px; position:relative; }
+  .cell.empty { background:transparent; border:none; }
+  .cell .num { font-size:12px; color:var(--muted); }
+  .cell.has { cursor:pointer; border-color:var(--accent-dim); background:linear-gradient(160deg,#0f1a16,#101010); }
+  .cell.has:hover { border-color:var(--accent); transform:translateY(-1px); transition:.12s; }
+  .cell.has .num { color:#fff; font-weight:700; }
+  .cell .dtag { margin-top:auto; font-size:9px; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); font-weight:700; }
+  .cell.today { box-shadow:0 0 0 1px var(--accent) inset; }
+
+  .list { margin-top:34px; }
+  .list h3 { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent); margin:0 0 12px; }
+  .row { display:flex; gap:12px; align-items:baseline; padding:12px 14px; border:1px solid var(--border); border-radius:10px;
+    background:var(--panel2); margin-bottom:8px; cursor:pointer; }
+  .row:hover { border-color:var(--accent); }
+  .row .d { font-size:11px; font-weight:700; color:var(--accent); white-space:nowrap; }
+  .row .t { font-size:14px; color:#fff; }
+  .row .dt { margin-left:auto; font-size:11px; color:var(--muted); white-space:nowrap; }
+
+  .empty-state { color:var(--muted); font-size:14px; padding:30px 0; text-align:center; }
+
+  /* Reader overlay */
+  .overlay { position:fixed; inset:0; background:#000; z-index:50; display:none; flex-direction:column; }
+  .overlay.open { display:flex; }
+  .obar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 16px;
+    background:#0a0a0a; border-bottom:1px solid var(--border); flex:0 0 auto; }
+  .obar .ot { font-size:13px; color:#fff; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .obar button { background:var(--panel); border:1px solid var(--border); color:#fff; border-radius:8px; padding:8px 14px; cursor:pointer; font-size:13px; }
+  .owrap { flex:1 1 auto; overflow:auto; -webkit-overflow-scrolling:touch; background:#0a0a0a; }
+  iframe#reader { width:100%; border:0; display:block; background:#0a0a0a; }
+  .hint { color:var(--muted); font-size:12px; text-align:center; margin-top:40px; }
+</style>
+</head>
+<body>
+<div class="shell" id="shell">
+
+  <!-- GATE -->
+  <div id="gate" class="gate">
+    <div class="brand">The Sports Neurology Stack</div>
+    <h2>Private archive</h2>
+    <p>Enter the access password to view the daily briefings.</p>
+    <input id="pw" type="password" placeholder="Password" autocomplete="current-password" />
+    <button id="enter" class="btn">Unlock</button>
+    <div id="err" class="err"></div>
+  </div>
+
+  <!-- APP -->
+  <div id="app" style="display:none;">
+    <div class="brand">The Sports Neurology Stack</div>
+    <h1>Daily Briefings</h1>
+    <p class="sub">A 30-day learning archive · click any highlighted day to read that edition.</p>
+
+    <div class="topbar">
+      <div class="monthnav">
+        <button class="navbtn" id="prev" aria-label="Previous month">‹</button>
+        <div class="monthlabel" id="monthlabel"></div>
+        <button class="navbtn" id="next" aria-label="Next month">›</button>
+      </div>
+      <button class="lock" id="lock">Lock</button>
+    </div>
+
+    <div class="cal" id="cal"></div>
+
+    <div class="list">
+      <h3>All editions</h3>
+      <div id="rows"></div>
+      <div id="emptyState" class="empty-state" style="display:none;">No briefings published yet.</div>
+    </div>
+
+    <div class="hint">New editions appear here automatically each morning.</div>
+  </div>
+</div>
+
+<!-- READER -->
+<div class="overlay" id="overlay">
+  <div class="obar">
+    <div class="ot" id="otitle"></div>
+    <button id="close">✕ Close</button>
+  </div>
+  <div class="owrap">
+    <iframe id="reader" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+  </div>
+</div>
+
+<script>
+  // ---- CONFIG ---------------------------------------------------------------
+  var FN_URL = "https://kthhdmrxymalbiazpodd.supabase.co/functions/v1/stack";
+  var ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0aGhkbXJ4eW1hbGJpYXpwb2RkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA3ODAyNzYsImV4cCI6MjA5NjM1NjI3Nn0.cOUzc1M5Zo8t8aFMKStZiwbPd57CaPgd1UOchekVH6M";
+  // ---------------------------------------------------------------------------
+
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  var briefings = [];      // [{day,date,title}]
+  var byDate = {};         // "YYYY-MM-DD" -> {day,date,title}
+  var pw = "";
+  var view = new Date();   // current calendar month
+
+  function api(action, extra) {
+    var body = Object.assign({ action: action, password: pw }, extra || {});
+    return fetch(FN_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "apikey": ANON, "Authorization": "Bearer " + ANON },
+      body: JSON.stringify(body)
+    }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, data: j }; }); });
+  }
+
+  function unlock() {
+    var btn = document.getElementById("enter");
+    var err = document.getElementById("err");
+    err.textContent = "";
+    pw = document.getElementById("pw").value;
+    if (!pw) { err.textContent = "Enter a password."; return; }
+    btn.disabled = true; btn.textContent = "Checking…";
+    api("list").then(function (res) {
+      btn.disabled = false; btn.textContent = "Unlock";
+      if (res.status === 401) { err.textContent = "Incorrect password."; return; }
+      if (!res.ok) { err.textContent = "Something went wrong. Try again."; return; }
+      try { sessionStorage.setItem("stack_pw", pw); } catch (e) {}
+      briefings = res.data.briefings || [];
+      byDate = {};
+      briefings.forEach(function (b) { byDate[b.date] = b; });
+      document.getElementById("gate").style.display = "none";
+      document.getElementById("app").style.display = "block";
+      // open calendar on the most recent briefing month
+      if (briefings.length) { var last = briefings[briefings.length - 1].date; view = new Date(last + "T12:00:00"); }
+      renderCalendar(); renderList();
+    }).catch(function () { btn.disabled = false; btn.textContent = "Unlock"; err.textContent = "Network error."; });
+  }
+
+  function renderCalendar() {
+    var y = view.getFullYear(), m = view.getMonth();
+    document.getElementById("monthlabel").textContent = MONTHS[m] + " " + y;
+    var cal = document.getElementById("cal");
+    cal.innerHTML = "";
+    DOW.forEach(function (d) { var e = document.createElement("div"); e.className = "dow"; e.textContent = d; cal.appendChild(e); });
+    var first = new Date(y, m, 1).getDay();
+    var days = new Date(y, m + 1, 0).getDate();
+    var todayStr = new Date().toISOString().slice(0, 10);
+    for (var i = 0; i < first; i++) { var blank = document.createElement("div"); blank.className = "cell empty"; cal.appendChild(blank); }
+    for (var dnum = 1; dnum <= days; dnum++) {
+      var iso = y + "-" + String(m + 1).padStart(2, "0") + "-" + String(dnum).padStart(2, "0");
+      var cell = document.createElement("div");
+      cell.className = "cell";
+      if (iso === todayStr) cell.className += " today";
+      var num = document.createElement("div"); num.className = "num"; num.textContent = dnum; cell.appendChild(num);
+      var b = byDate[iso];
+      if (b) {
+        cell.className += " has";
+        var tag = document.createElement("div"); tag.className = "dtag"; tag.textContent = "Day " + b.day; cell.appendChild(tag);
+        (function (day, title) { cell.onclick = function () { openDay(day, title); }; })(b.day, b.title);
+      }
+      cal.appendChild(cell);
+    }
+  }
+
+  function renderList() {
+    var rows = document.getElementById("rows");
+    rows.innerHTML = "";
+    document.getElementById("emptyState").style.display = briefings.length ? "none" : "block";
+    briefings.slice().reverse().forEach(function (b) {
+      var r = document.createElement("div"); r.className = "row";
+      var d = document.createElement("div"); d.className = "d"; d.textContent = "Day " + b.day;
+      var t = document.createElement("div"); t.className = "t"; t.textContent = cleanTitle(b.title);
+      var dt = document.createElement("div"); dt.className = "dt"; dt.textContent = fmtDate(b.date);
+      r.appendChild(d); r.appendChild(t); r.appendChild(dt);
+      r.onclick = function () { openDay(b.day, b.title); };
+      rows.appendChild(r);
+    });
+  }
+
+  function cleanTitle(t) { return (t || "").replace(/^Day\s*\d+\s*[—-]\s*/, ""); }
+  function fmtDate(iso) { var d = new Date(iso + "T12:00:00"); return MONTHS[d.getMonth()].slice(0,3) + " " + d.getDate(); }
+
+  function openDay(day, title) {
+    var ov = document.getElementById("overlay");
+    var frame = document.getElementById("reader");
+    document.getElementById("otitle").textContent = title || ("Day " + day);
+    frame.srcdoc = '<div style="color:#888;font-family:sans-serif;padding:40px;text-align:center;">Loading…</div>';
+    ov.classList.add("open"); document.body.style.overflow = "hidden";
+    api("get", { day: day }).then(function (res) {
+      if (!res.ok || !res.data.briefing) { frame.srcdoc = '<div style="color:#f87171;font-family:sans-serif;padding:40px;text-align:center;">Could not load this edition.</div>'; return; }
+      var html = res.data.briefing.html || "";
+      // ensure links open in a new tab from within the sandboxed iframe
+      if (html.indexOf("<base") === -1) { html = html.replace(/<head>/i, '<head><base target="_blank">'); }
+      frame.srcdoc = html;
+    });
+  }
+
+  function sizeFrame() {
+    var frame = document.getElementById("reader");
+    try { var h = frame.contentDocument.body.scrollHeight; if (h > 0) frame.style.height = (h + 40) + "px"; } catch (e) { frame.style.height = "1200px"; }
+  }
+  document.getElementById("reader").addEventListener("load", function () { setTimeout(sizeFrame, 60); });
+
+  function closeReader() { document.getElementById("overlay").classList.remove("open"); document.body.style.overflow = ""; document.getElementById("reader").srcdoc = ""; }
+
+  function lock() { try { sessionStorage.removeItem("stack_pw"); } catch (e) {} pw = ""; location.reload(); }
+
+  // wiring
+  document.getElementById("enter").onclick = unlock;
+  document.getElementById("pw").addEventListener("keydown", function (e) { if (e.key === "Enter") unlock(); });
+  document.getElementById("prev").onclick = function () { view.setMonth(view.getMonth() - 1); renderCalendar(); };
+  document.getElementById("next").onclick = function () { view.setMonth(view.getMonth() + 1); renderCalendar(); };
+  document.getElementById("close").onclick = closeReader;
+  document.getElementById("lock").onclick = lock;
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeReader(); });
+
+  // auto-unlock if password remembered this session
+  (function () {
+    var saved = null; try { saved = sessionStorage.getItem("stack_pw"); } catch (e) {}
+    if (saved) { document.getElementById("pw").value = saved; unlock(); }
+  })();
+</script>
+</body>
+</html>
