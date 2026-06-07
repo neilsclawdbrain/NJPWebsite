@@ -101,7 +101,7 @@ p{margin-bottom:1rem}
 .nav-toggle .icon-close{display:none}
 .nav-toggle[aria-expanded="true"] .icon-menu{display:none}
 .nav-toggle[aria-expanded="true"] .icon-close{display:block}
-@media (max-width:780px){
+@media (max-width:1080px){
   .nav-toggle{display:inline-flex}
   .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:.4rem;padding:1rem 1.25rem 1.25rem;background:rgba(11,18,32,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
   .nav-links.open{display:flex}
@@ -117,7 +117,7 @@ p{margin-bottom:1rem}
 .btn-ghost:hover{background:var(--surface);text-decoration:none}
 
 /* ===== Hero (matches teams page) ===== */
-.hero{position:relative;padding-top:clamp(4rem,8vw,7rem);padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden;isolation:isolate;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(52,211,153,.05));border-bottom:1px solid var(--border)}
+.hero{position:relative;display:grid;align-items:center;min-height:clamp(480px,58vh,620px);padding-top:clamp(3rem,6vw,5rem);padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden;isolation:isolate;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(52,211,153,.05));border-bottom:1px solid var(--border)}
 .hero::before{content:"";position:absolute;inset:-20% -10% auto -10%;height:620px;background:radial-gradient(ellipse at 30% 20%,rgba(34,211,238,.18),transparent 60%),radial-gradient(ellipse at 80% 10%,rgba(52,211,153,.12),transparent 60%);pointer-events:none;z-index:-2}
 .hero h1{margin-bottom:1.5rem;color:#fff}
 .hero p{font-size:1.15rem;color:var(--fg-muted);max-width:600px;margin-bottom:2rem}
@@ -181,7 +181,9 @@ footer a:hover{color:var(--primary)}
       <a href="athletes.html">For Athletes</a>
       <a href="teams.html">For Teams</a>
       <a href="index.html#expertise">Expertise</a>
+      <a href="index.html#brain-anatomy">Brain</a>
       <a href="index.html#resources">Resources</a>
+      <a href="index.html#faq">FAQ</a>
       <a href="index.html#about">About</a>
       <a href="index.html#contact" class="btn btn-primary">Discuss Engagement</a>
     </nav>
@@ -433,7 +435,7 @@ footer a:hover{color:var(--primary)}
 
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 <script>
-(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('primaryNav');if(!t||!n)return;function close(){n.classList.remove('open');t.setAttribute('aria-expanded','false')}t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});n.addEventListener('click',function(e){if(e.target.closest('a'))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();t.focus()}});window.addEventListener('resize',function(){if(window.innerWidth>780)close()});})();
+(function(){var t=document.querySelector('.nav-toggle'),n=document.getElementById('primaryNav');if(!t||!n)return;function close(){n.classList.remove('open');t.setAttribute('aria-expanded','false')}t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});n.addEventListener('click',function(e){if(e.target.closest('a'))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('open')){close();t.focus()}});window.addEventListener('resize',function(){if(window.innerWidth>1080)close()});})();
 </script>
 </body>
 </html>
